@@ -1,4 +1,4 @@
-# python_transcription
+# Audio Transcription Tool
  - 音声文字起こし機能を利用してみたサンプルコードです
  - みやさかしんや氏@Python/DX/エンジニア @miyashin_prg[https://twitter.com/miyashin_prg]
  - https://twitter.com/miyashin_prg/status/1606580155480444929
@@ -29,8 +29,8 @@
 pip install SpeechRecognition
 ```
 
-# Note
- -　read this
+# Reference
+
  - https://pypi.org/project/SpeechRecognition/
 
 # Author
