@@ -1,10 +1,32 @@
 # PowerShell
 
-## Concept
-一時的な便利コードを格納します。
-<br>
-各リポジトリに必要なREADMEを配置します。
-<br>
+## About this Repository
+
+```
+It is my learning environment.
+I refer to many sites, which I will list in the comments.
+You are free to use any of them if you can actually use them in your work.
+However, please refrain from commercial use, unauthorized reproduction, and failure to respect our predecessors.
+As a human being, I hope that the tips will make many jobs much easier.
+*This is a translation using DeepL.
+```
+
+## Requirement
+
+* PowerShell 7.2
+
+## Usage / Installation
+ - I would like you to refer to Microsoft Docs.
+ - The content is extensive, including how to install the latest PowerShell programs.
+
+https://docs.microsoft.com/ja-jp/powershell/
+
+## Note
+
+ - There are some caveats to using PowerShell.
+ - The following Qiita article is a good reference.
+
+https://qiita.com/Targityen/items/3d2e0b5b0b7b04963750
 
 ## Directory
 - README.md
