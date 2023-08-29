@@ -1,10 +1,18 @@
 # Python
 
-## Concept
-一時的な便利コードを格納します。
-<br>
-各リポジトリに必要なREADMEを配置します。
-<br>
+ - Development Efficiency or Reuse
+
+## I am a Apprentice Programmer.
+I would enjoy the program more.
+So leave a generic note in this file.
+In principle, they are made for your own exclusive use, but you can have them copied if necessary.
+The reason is that the source of my information is the Internet.
+Thank you for the progress of humanity and the Internet.
+Thank you for learning. Celebrate life.
+Translation conducted at DeepL. https://www.deepl.com/ja/translator
+
+@DemodoriGatsuo
+***
 
 ## Directory
 - README.md
@@ -45,3 +53,74 @@
 
 ## お願い
  - 当方で認識誤り、修正すべき点があればスグにご教授いただけると幸いです
+
+
+# example
+
+ ```html:Python_Comment_Module
+ """ Module  Name
+* Copyright (c) 2022, Tech Lovers. All rights reserved
+* Project Name    : --
+* Feature         : --
+* Creation Date   : yyyy.MM.dd
+* Programming language used: Python
+* Author          : DEmodoriGatsuO https://github.com/DEmodoriGatsuO
+* Twitter         : https://twitter.com/DemodoriGatsuo Follow Me!
+* Sorry           : I like English. But I can't use English.
+
+
+Todo:
+    
+    * import ---
+    * import ---
+
+"""
+```
+
+ ```html:Python_Comment_class
+    """class title
+
+    Description
+    *
+    *
+
+    Attributes:
+        name (type): Description
+        name (type): Description
+
+    """
+```
+
+ ```html:Python_Comment_def
+    """def name
+
+    Description
+    *
+    *
+
+        Args:
+            - name : type : description
+            - name : type : description
+
+        Returns:
+            - name : type : description
+
+        Raises:
+            - error : description
+
+        Yields:
+            return type: description
+
+        Examples:
+
+            -
+
+            >>> ---- (argv1, argv2)
+               ans
+
+        Note:
+            -
+            -
+
+    """
+```
