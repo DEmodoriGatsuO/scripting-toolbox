@@ -23,11 +23,11 @@ function convertUnixTimestamps() {
   
     // 4. Assign the updated array back to the range
     range.setValues(values);
-  }
+}
   
   // Convert UNIX timestamp to human-readable date and time
   function convertUnixToDateTime(unixTimestamp) {
     const formattedDate = Utilities.formatDate(new Date(unixTimestamp), "Asia/Tokyo", "yyyy/MM/dd HH:mm:ss");
     return formattedDate;
-  }
+}
   
