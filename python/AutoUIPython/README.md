@@ -15,7 +15,7 @@ Ensure you have Python installed. You can clone the repository and install the r
 
 ```bash
 git clone https://github.com/YourUsername/AutoUIPython.git
-cd PyUIAutomateHelper
+cd AutoUIPython
 pip install -r requirements.txt
 ```
 
