@@ -22,7 +22,7 @@ This VBA script is designed to consolidate all worksheets from Excel files in a 
 
 ## Author
 - Author: De'modori Gatsuo
-- GitHub: [出戻りガツオ🐟](https://github.com/De'modori Gatsuo)
+- GitHub: [出戻りガツオ🐟](https://github.com/DEmodoriGatsuO)
 - Twitter: [出戻りガツオ🐟](https://twitter.com/DemodoriGatsuo)
 
 ## Disclaimer
