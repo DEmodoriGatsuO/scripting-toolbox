@@ -13,7 +13,7 @@ This VBA script is designed to consolidate all worksheets from Excel files in a 
 1. Open Excel.
 2. Press `ALT` + `F11` to open the Visual Basic for Applications (VBA) editor.
 3. In the VBA editor, insert a new module (Insert > Module).
-4. Copy and paste the contents of the `GetWorkbooksSheets.bas` file into the new module.
+4. Copy and paste the contents of the `ConsolidateExcelSheets.bas` file into the new module.
 5. Save the module.
 6. Run the script:
    - Go back to Excel.
