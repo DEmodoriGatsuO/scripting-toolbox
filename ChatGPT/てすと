@@ -1,0 +1,32 @@
+# SharePoint Online 管理センターのURLと復元するサイトのURLを設定
+$AdminSiteURL = "https://[your-tenant]-admin.sharepoint.com"
+$SiteURL = "https://[your-tenant].sharepoint.com/sites/[your-site]"
+
+# 管理者のユーザー名とパスワードを入力
+$AdminUsername = "your-admin-email@yourdomain.com"
+$AdminPassword = ConvertTo-SecureString "your-admin-password" -AsPlainText -Force
+
+# 管理者資格情報オブジェクトを作成
+$Credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($AdminUsername, $AdminPassword)
+
+# SharePoint Online 管理センターとサイトへの接続を確立
+Connect-SPOService -Url $AdminSiteURL -Credential $Credentials
+$Context = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL)
+$Context.Credentials = $Credentials
+
+# ゴミ箱を取得
+$RecycleBinItems = $Context.Site.RecycleBin
+$Context.Load($RecycleBinItems)
+$Context.ExecuteQuery()
+
+# ゴミ箱内のすべてのアイテムを復元
+foreach ($Item in $RecycleBinItems)
+{
+    # 復元実行
+    $Item.Restore()
+    $Context.ExecuteQuery()
+    Write-Host "Restored item:" $Item.Title -ForegroundColor Green
+}
+
+# 切断
+Disconnect-SPOService
