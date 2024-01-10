@@ -1,1 +1,31 @@
-# SharePoint Online 管理センターのURLと復元するサイトのURL
+Dim folderPath, objExcel, objWorkbook, objFSO, objFolder, objFile
+
+' ここにフォルダのパスを設定してください
+folderPath = "C:\Your\Path\Here"
+
+Set objExcel = CreateObject("Excel.Application")
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+Set objFolder = objFSO.GetFolder(folderPath)
+
+objExcel.DisplayAlerts = False
+
+For Each objFile In objFolder.Files
+    If objFSO.GetExtensionName(objFile.Name) = "xlsx" Then
+        Set objWorkbook = objExcel.Workbooks.Open(objFile.Path)
+        
+        If objWorkbook.Sheets.Count = 1 Then
+            ' 最初のシートの名前を"マルマル"にリネーム
+            objWorkbook.Sheets(1).Name = "マルマル"
+            objWorkbook.Save
+        End If
+        
+        objWorkbook.Close False
+    End If
+Next
+
+objExcel.Quit
+
+Set objWorkbook = Nothing
+Set objExcel = Nothing
+Set objFSO = Nothing
+Set objFolder = Nothing
