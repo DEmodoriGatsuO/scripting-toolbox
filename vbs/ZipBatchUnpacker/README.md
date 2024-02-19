@@ -33,16 +33,18 @@ ZipBatchUnpackerを使用するには以下が必要です：
 
 入力CSVは以下のフォーマットに従う必要があります：
 
-```
-"path_to_zip_file","password","destination_folder"
-"path_to_another_zip_file","another_password","another_destination_folder"
-```
+|Column1|Column2|Column3|
+|---|---|---|
+|path_to_zip_file|password|destination_folder|
+|path_to_another_zip_file|another_password|another_destination_folder
 
 注：ZIPファイルにパスワードが不要な場合は、パスワードフィールドを空にしてください。
 
-## 出力
+- ヘッダーは無しにしてください
 
-スクリプトは、入力ファイルと同じデータを含む出力CSVファイルを生成しますが、展開の結果に基づいて各行に「成功」または「失敗」のステータスを追加します。
+## 出力CSVフォーマット
+
+スクリプトは、入力ファイルと同じデータを含む出力CSVファイルを生成しますが、展開の結果に基づいて各行に「Success」または「Failure」のステータスを追加します。
 
 ## ライセンス
 
