@@ -1,4 +1,329 @@
-Dim folderPath, objExcel, objWorkbook, objFSO, objFolder, objFile
+# [SharePoint コネクタ](https://learn.microsoft.com/ja-jp/connectors/sharepoint/)で出来ること
+
+- [リスト ビューを取得](https://learn.microsoft.com/ja-jp/connectors/sharepoint/#%E3%83%AA%E3%82%B9%E3%83%88-%E3%83%93%E3%83%A5%E3%83%BC%E3%81%AE%E5%8F%96%E5%BE%97)
+- [リストの取得](https://learn.microsoft.com/ja-jp/connectors/sharepoint/#%E3%83%AA%E3%82%B9%E3%83%88%E3%82%92%E5%8F%96%E5%BE%97)
+- [ルート フォルダーのリスト](https://learn.microsoft.com/ja-jp/connectors/sharepoint/#%E3%83%AA%E3%82%B9%E3%83%88-%E3%83%AB%E3%83%BC%E3%83%88-%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%83%BC)
+- [項目の作成](https://learn.microsoft.com/ja-jp/connectors/sharepoint/#%E9%A0%85%E7%9B%AE%E3%81%AE%E4%BD%9C%E6%88%90)
+- [項目の更新](https://learn.microsoft.com/ja-jp/connectors/sharepoint/#%E9%A0%85%E7%9B%AE%E3%81%AE%E6%9B%B4%E6%96%B0)
+- [項目の削除](https://learn.microsoft.com/ja-jp/connectors/sharepoint/#%E9%A0%85%E7%9B%AE%E3%81%AE%E5%89%8A%E9%99%A4)
+- [項目の取得](https://learn.microsoft.com/ja-jp/connectors/sharepoint/#%E9%A0%85%E7%9B%AE%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B)
+- [アイテムの共有を停止](https://learn.microsoft.com/ja-jp/connectors/sharepoint/#%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E3%81%BE%E3%81%9F%E3%81%AF%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E5%85%B1%E6%9C%89%E3%82%92%E5%81%9C%E6%AD%A2%E3%81%97%E3%81%BE%E3%81%99)
+- [アイテムへのアクセス権の付与](https://learn.microsoft.com/ja-jp/connectors/sharepoint/#%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E3%81%BE%E3%81%9F%E3%81%AF%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%83%BC%E3%81%B8%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%82%92%E8%A8%B1%E5%8F%AF)
+
+非常に多くのアクションが、[SharePoint コネクタ](https://learn.microsoft.com/ja-jp/connectors/sharepoint/)で実行することができます。
+一方で`リストを作成する`となると、[SharePoint に HTTP要求を送信する](https://learn.microsoft.com/ja-jp/connectors/sharepoint/#http-%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%82%92-sharepoint-%E3%81%AB%E9%80%81%E4%BF%A1%E3%81%97%E3%81%BE%E3%81%99)アクションで対処する領域のようです。
+
+`リストを作成`に焦点をあてて、アクションを見ていきたいと思います。
+
+
+https://learn.microsoft.com/ja-jp/connectors/sharepoint/
+
+https://learn.microsoft.com/ja-jp/connectors/sharepoint/#http-%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%82%92-sharepoint-%E3%81%AB%E9%80%81%E4%BF%A1%E3%81%97%E3%81%BE%E3%81%99
+
+# Excelから次の段階へ進めるSharePoint Lists
+あらためてDX推進を担うにあたり、`SharePoint Lists`の強みは常々感じます。
+`Microsoft 365`の強み、APIでサービスの間をつなげるという意味でも、SharePoint Listsは、最も身近で優秀なパートナーです。（GPT的な文章ですが、ジブンで書いた文章です）
+
+理由は、`共同作業向けのテーブル`であり、`コンフリクトを防ぐことができたり`、`データ型や入力規則を定義できる`というメリットが挙げられます。
+`復元`も気軽にできたりと万々歳です🙌
+
+自由度が高い分、`Excel`が好まれることも重々理解しておりますが、まずは今`Excel`で担っているタスクを、`SharePoint Lists`に置き換えてみるだけでも、業務のシーンは大きく変わるのではないでしょうか。
+
+そんな`SharePoint Lists`ですが、リストそのものを作成するために、結構なクリックを**個人的には** 要すると感じています。
+
+そんなにリストをパカパカ作るな！という助言はあると思いますが、準備が手間です。
+- データ型の設定
+- 内部名・表示名を意識した設定
+- コピペでサクっと準備できない
+
+こういったことが、**私は！** ムムム🧐と感じることが多いです。
+
+ExcelやCSVからサクっと作る手段も、あるにはありますが、
+`内部名・表示名を意識した設定`が上手く反映されなかったりと、ムムム🧐と感じてしまいます。
+
+[SharePoint Online 管理シェル](https://learn.microsoft.com/ja-jp/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)を使うことができれば、サクっといける気もしますが、一般の従業員にそんなものは使わせていただけることは、まずありません。
+
+# Power Automateで解決してみよう！
+そんなこんなで、Power Automateを使って、この問題を解決してみます。
+
+[Graph API](https://learn.microsoft.com/ja-jp/onedrive/developer/rest-api/?view=odsp-graph-online)を使ってみましょう。
+
+:::note info
+SharePoint REST APIでやっているパターンは、ほかにも書いている人がいるのでやめておきました。
+:::
+
+https://learn.microsoft.com/ja-jp/onedrive/developer/rest-api/?view=odsp-graph-online
+
+## [新しいリストを作成する](https://learn.microsoft.com/ja-jp/onedrive/developer/rest-api/api/list_create?view=odsp-graph-online) 方法
+Microsoft learnに記載がありますね。
+
+https://learn.microsoft.com/ja-jp/onedrive/developer/rest-api/api/list_create?view=odsp-graph-online
+
+これを`Power Automate`で実行すると、下記のようになります。
+
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2734332/d0d0a143-bde2-cf8d-5575-c43f66febc5c.png)
+
+| 項目 | 設定値 |
+|:-:|:-:|
+| サイトのアドレス | 対象のSharePointサイト |
+| 方法 | POST |
+| URI | `_api/v2.1/sites/root/lists` |
+
+```json:ボディ
+{
+  "displayName": "Books",
+  "columns": [
+    {
+      "name": "Author",
+      "text": { }
+    },
+    {
+      "name": "PageCount",
+      "number": { }
+    }
+  ],
+  "list": {
+    "template": "genericList"
+  }
+}
+```
+
+
+learnと少し`Body`が異なっています。
+`name`プロパティが`displayName`になることです。
+`name`のままだとエラーになります。
+
+learnの例を見ると、URIは
+
+```plaintext:URI
+/sites/{site-id}/lists
+```
+
+となっていますが、特定の子に位置するサイトではないため、`root`で指定しています。
+
+```plaintext:URI
+_api/v2.1/sites/root/lists
+```
+
+Power Automateを実行すると、下記のようにリストがサクっと作られます。
+
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2734332/188491dc-263c-2baa-782b-7af90fe39e1d.png)
+
+ちなみに
+
+```json
+{
+  "list": {
+    "template": "genericList"
+  }
+}
+```
+
+こちらの`"template": "genericList"`は、タイトル列のみが含まれる`空白のリスト`に該当します。
+
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2734332/fd90d27c-37d0-354d-f50c-aa641ddbef26.png)
+
+
+:::note info
+1秒で出来るのは嬉しい✨
+:::
+
+以下に、画像の情報を文字起こしし、対応するJSONプロパティを表にまとめました。
+
+### 列の情報の種類と対応するJSON
+
+| 列の種類 | JSON |
+|---|---|
+| 1行テキスト | `"text": {}` |
+| 複数行テキスト | `"multilineText": {}` |
+| 選択肢（メニューから選択） | `"choice": {"choices": []}` |
+| 数値（1、1.0、100） | `"number": {}` |
+| 通貨（$, ¥, €） | `"currency": {}` |
+| 日付と時刻 | `"dateTime": {}` |
+| 参照（このサイトにある既存の情報） | `"lookup": {}` |
+| はい/いいえ（チェック ボックス） | `"boolean": {}` |
+| ユーザーまたはグループ | `"personOrGroup": {}` |
+| ハイパーリンクまたは画像 | `"hyperlinkOrPicture": {}` |
+| 集計値（他の列を基にした計算結果） | `"calculated": {}` |
+| 画像 | `"image": {}` |
+| タスクの結果 | `"outcomeChoice": {}` |
+| 外部データ | `"externalData": {}` |
+| 管理されたメタデータ | `"taxonomyFieldType": {}` |
+
+改めてみると列の種類が多いですね！
+基本的な列の構成は、下記のようになります。
+
+```json:1行テキストの例
+{
+  "name": "内部名",
+  "displayName": "表示名",
+  "text": {}
+}
+```
+
+`name`が`内部名`、`displayName`が`表示名`です。
+**別々に指定できるのが、ほんっとうに嬉しい！✨**
+
+### 列ごとのJSONの例
+
+
+
+#### 1行テキスト
+
+```json
+{
+  "name": "InternalTextFieldName",
+  "displayName": "Custom Text Field",
+  "text": {}
+}
+```
+
+#### 複数行テキスト
+
+```json
+{
+  "name": "InternalMultilineTextFieldName",
+  "displayName": "Custom Multiline Text Field",
+  "multilineText": {}
+}
+```
+
+#### 選択肢（メニューから選択）
+
+```json
+{
+  "name": "InternalChoiceFieldName",
+  "displayName": "Custom Choice Field",
+  "choice": {
+    "choices": ["Option1", "Option2", "Option3"]
+  }
+}
+```
+
+#### 数値（1、1.0、100）
+
+```json
+{
+  "name": "InternalNumberFieldName",
+  "displayName": "Custom Number Field",
+  "number": {}
+}
+```
+
+#### 通貨（$, ¥, €）
+
+```json
+{
+  "name": "InternalCurrencyFieldName",
+  "displayName": "Custom Currency Field",
+  "currency": {}
+}
+```
+
+#### 日付と時刻
+
+```json
+{
+  "name": "InternalDateTimeFieldName",
+  "displayName": "Custom DateTime Field",
+  "dateTime": {}
+}
+```
+
+#### 参照（このサイトにある既存の情報）
+
+```json
+{
+  "name": "InternalLookupFieldName",
+  "displayName": "Custom Lookup Field",
+  "lookup": {
+    "lookupList": "lookup-list-id",
+    "lookupField": "Title"
+  }
+}
+```
+
+#### はい/いいえ（チェック ボックス）
+
+```json
+{
+  "name": "InternalBooleanFieldName",
+  "displayName": "Custom Boolean Field",
+  "boolean": {}
+}
+```
+
+#### ユーザーまたはグループ
+
+```json
+{
+  "name": "InternalPersonFieldName",
+  "displayName": "Custom Person Field",
+  "personOrGroup": {}
+}
+```
+
+#### ハイパーリンクまたは画像
+
+```json
+{
+  "name": "InternalHyperlinkFieldName",
+  "displayName": "Custom Hyperlink Field",
+  "hyperlinkOrPicture": {}
+}
+```
+
+#### 集計値（他の列を基にした計算結果）
+
+```json
+{
+  "name": "InternalCalculatedFieldName",
+  "displayName": "Custom Calculated Field",
+  "calculated": {
+    "formula": "=([Column1]+[Column2])"
+  }
+}
+```
+
+#### 画像
+
+```json
+{
+  "name": "InternalImageFieldName",
+  "displayName": "Custom Image Field",
+  "image": {}
+}
+```
+
+#### タスクの結果
+
+```json
+{
+  "name": "InternalOutcomeFieldName",
+  "displayName": "Custom Outcome Field",
+  "outcomeChoice": {}
+}
+```
+
+#### 外部データ
+
+```json
+{
+  "name": "InternalExternalDataFieldName",
+  "displayName": "Custom External Data Field",
+  "externalData": {}
+}
+```
+
+#### 管理されたメタデータ
+
+```json
+{
+  "name": "InternalTaxonomyFieldName",
+  "displayName": "Custom Taxonomy Field",
+  "taxonomyFieldType": {}
+}
+```Dim folderPath, objExcel, objWorkbook, objFSO, objFolder, objFile
 
 ' ここにフォルダのパスを設定してください
 folderPath = "C:\Your\Path\Here"
