@@ -1,92 +1,40 @@
-<!<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>セルを結合した四列のテーブル</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            margin: auto;
-            text-align: left;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-        }
-        td:first-child,
-        td:nth-child(3) {
-            background-color: #f2f2f2; /* グレーの背景色 */
-        }
-    </style>
-</head>
-<body>
-    <table>
-        <tr>
-            <td colspan="2">結合されたセル1-2</td>
-            <td>データ3</td>
-            <td>データ4</td>
-        </tr>
-        <tr>
-            <td>データ5</td>
-            <td>データ6</td>
-            <td rowspan="2">結合されたセル7-11</td>
-            <td>データ8</td>
-        </tr>
-        <tr>
-            <td>データ9</td>
-            <td>データ10</td>
-            <td>データ12</td>
-        </tr>
-        <tr>
-            <td colspan="4">結合されたセル全列</td>
-        </tr>
-    </table>
-</body>
-</html> html>
-<html lang='ja'>
-<head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Office UI Fabric アイコンとラベル例</title>
-    <!-- Office UI Fabric のCSSを読み込んでいる -->
-    <link rel='stylesheet' href='https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css'>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 20px;
-        }
-        .icon-container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .icon-container i {
-            margin-right: 10px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Office UI Fabric アイコンとラベル例</h1>
-    <div class='icon-container'>
-        <i class='ms-Icon ms-font-xl ms-Icon--Cancel ms-fontColor-themePrimary'></i>
-        <span>Close</span>
-    </div>
-    <div class='icon-container'>
-        <i class='ms-Icon ms-font-xl ms-Icon--Save ms-fontColor-themePrimary'></i>
-        <span>Save</span>
-    </div>
-    <div class='icon-container'>
-        <i class='ms-Icon ms-font-xl ms-Icon--Print ms-fontColor-themePrimary'></i>
-        <span>Print</span>
-    </div>
-    <div class='icon-container'>
-        <i class='ms-Icon ms-font-xl ms-Icon--Cancel ms-fontColor-themePrimary'></i>
-        <span>Cancel</span>
-    </div>
-    <div class='icon-container'>
-        <i class='ms-Icon ms-font-xl ms-Icon--Send ms-fontColor-themePrimary'></i>
-        <span>Send</span>
-    </div>
-</body>
-</html>
+Sub TestPowerPointTextFrame()
+    ' PowerPointのオブジェクトを宣言
+    Dim pptApp As Object
+    Dim pptPres As Object
+    Dim pptSlide As Object
+    Dim pptShape As Object
+    
+    ' PowerPointを起動
+    Set pptApp = CreateObject("PowerPoint.Application")
+    pptApp.Visible = True
+    
+    ' PowerPointのテンプレートを開く
+    Set pptPres = pptApp.Presentations.Open("C:\Path\To\Your\Template.pptx")
+    
+    ' 確認したいスライドを取得
+    Set pptSlide = pptPres.Slides(1) ' 例として1ページ目のスライド
+    
+    ' スライドのすべてのテキストフレームをチェックし、デバッグログに出力する
+    Dim shapeIndex As Integer
+    For shapeIndex = 1 To pptSlide.Shapes.Count
+        Set pptShape = pptSlide.Shapes(shapeIndex)
+        If pptShape.HasTextFrame Then
+            If pptShape.TextFrame.HasText Then
+                Debug.Print "Shape " & shapeIndex & ": " & pptShape.TextFrame.TextRange.Text
+            Else
+                Debug.Print "Shape " & shapeIndex & ": No text in text frame"
+            End If
+        Else
+            Debug.Print "Shape " & shapeIndex & ": No text frame"
+        End If
+    Next shapeIndex
+    
+    ' クリーンアップ
+    pptPres.Close
+    pptApp.Quit
+    Set pptApp = Nothing
+    Set pptPres = Nothing
+    Set pptSlide = Nothing
+    Set pptShape = Nothing
+End Sub
