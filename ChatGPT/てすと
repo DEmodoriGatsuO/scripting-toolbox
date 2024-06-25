@@ -1,54 +1,54 @@
-Sub ExcelToPowerPoint()
-    ' PowerPointのオブジェクトを宣言
+Sub CopyChartToPowerPoint()
     Dim pptApp As Object
     Dim pptPres As Object
     Dim pptSlide As Object
-    Dim pptShape As Object
-    
-    ' Excelのデータ範囲を取得
-    Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Sheet1")
-    Dim startCell As Range
-    Set startCell = ws.Range("A2") ' データの開始セルを指定
-    
-    ' PowerPointを起動
-    Set pptApp = CreateObject("PowerPoint.Application")
+    Dim xlChart As ChartObject
+    Dim slideIndex As Integer
+
+    ' PowerPointを起動または取得
+    On Error Resume Next
+    Set pptApp = GetObject(, "PowerPoint.Application")
+    If pptApp Is Nothing Then
+        Set pptApp = CreateObject("PowerPoint.Application")
+    End If
+    On Error GoTo 0
     pptApp.Visible = True
-    
-    ' PowerPointのテンプレートを開く
-    Set pptPres = pptApp.Presentations.Open("C:\Path\To\Your\Template.pptx")
-    
-    ' データの数だけ繰り返す
-    Dim i As Integer
-    Dim cell As Range
-    For i = 0 To ws.Cells(Rows.Count, startCell.Column).End(xlUp).Row - startCell.Row
-        ' 現在のデータ行のセルを取得
-        Set cell = startCell.Offset(i, 0)
-        
-        ' PowerPointを複製
-        pptPres.SaveCopyAs "C:\Path\To\Your\Output_" & i & ".pptx"
-        Set pptPres = pptApp.Presentations.Open("C:\Path\To\Your\Output_" & i & ".pptx")
-        
-        ' スライド5ページ目を取得
-        Set pptSlide = pptPres.Slides(5)
-        
-        ' スライド5ページ目の30項目の文字列を置き換える
-        Dim j As Integer
-        For j = 1 To 30
-            If j <= pptSlide.Shapes.Count Then
-                pptSlide.Shapes(j).TextFrame.TextRange.Text = Replace(pptSlide.Shapes(j).TextFrame.TextRange.Text, "Placeholder", cell.Offset(0, j - 1).Value)
-            End If
-        Next j
-        
-        ' PowerPointを保存
-        pptPres.Save
-        pptPres.Close
-    Next i
-    
-    ' クリーンアップ
-    pptApp.Quit
-    Set pptApp = Nothing
-    Set pptPres = Nothing
+
+    ' 新しいプレゼンテーションを作成または既存のプレゼンテーションを開く
+    On Error Resume Next
+    Set pptPres = pptApp.ActivePresentation
+    If pptPres Is Nothing Then
+        Set pptPres = pptApp.Presentations.Add
+    End If
+    On Error GoTo 0
+
+    ' 新しいスライドを追加
+    slideIndex = pptPres.Slides.Count + 1
+    Set pptSlide = pptPres.Slides.Add(slideIndex, 12) ' 12はppLayoutTitleOnlyを表す定数
+
+    ' コピーするExcelグラフを指定
+    Set xlChart = ThisWorkbook.Sheets("Sheet1").ChartObjects("Chart 1") ' シート名とグラフ名を指定
+
+    ' グラフをコピー
+    xlChart.Chart.ChartArea.Copy
+
+    ' PowerPointにグラフを貼り付け
+    pptSlide.Shapes.PasteSpecial DataType:=2 ' 2はppPasteEnhancedMetafileを表す定数
+
+    ' 埋め込んだグラフを整列
+    With pptSlide.Shapes(pptSlide.Shapes.Count)
+        .LockAspectRatio = msoFalse
+        .Left = 100
+        .Top = 100
+        .Width = xlChart.Width
+        .Height = xlChart.Height
+    End With
+
+    ' オブジェクトを解放
+    Set xlChart = Nothing
     Set pptSlide = Nothing
-    Set pptShape = Nothing
+    Set pptPres = Nothing
+    Set pptApp = Nothing
+
+    MsgBox "グラフをPowerPointに埋め込みました。"
 End Sub
