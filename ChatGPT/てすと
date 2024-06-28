@@ -1,4 +1,89 @@
-Sub CopyChartToPowerPoint()
+はい、Office 365コネクタを利用して組織に属する人の選択を実装することができます。この場合、Power Automateの「People Picker」コントロールを使用します。これにより、組織内のユーザーを動的に選択できるようになります。
+
+以下に、Office 365コネクタを使用して組織に属する人の選択を含むアダプティブカードの例を示します：
+
+
+
+```json
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "担当者を選択してください："
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "personSelection",
+            "choices": [],
+            "isMultiSelect": false,
+            "style": "compact",
+            "choices@data": {
+                "dataset": "graph.microsoft.com/users"
+            }
+        },
+        {
+            "type": "TextBlock",
+            "text": "優先度を選択してください："
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "prioritySelection",
+            "style": "expanded",
+            "isMultiSelect": false,
+            "choices": [
+                {
+                    "title": "高",
+                    "value": "high"
+                },
+                {
+                    "title": "中",
+                    "value": "medium"
+                },
+                {
+                    "title": "低",
+                    "value": "low"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "送信"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+この新しいアダプティブカードの実装について説明します：
+
+1. 組織に属する人の選択：
+   - "type": "Input.ChoiceSet"を使用しています。
+   - "choices@data": { "dataset": "graph.microsoft.com/users" } を指定することで、Office 365のユーザーリストを動的に取得します。
+   - "isMultiSelect": falseで、単一選択になっています。必要に応じて、trueに変更して複数選択にすることもできます。
+   - "style": "compact"で、ドロップダウンリスト形式で表示されます。
+
+2. ラジオボタン（優先度選択）：
+   - 前回の例と同じく実装されています。
+
+3. 送信ボタン：
+   - 前回の例と同じです。
+
+このJSONをPower Automateのアダプティブカードアクションに貼り付けて使用します。ただし、以下の点に注意してください：
+
+1. Office 365コネクタの設定：
+   - Power Automateのフロー内で、Office 365コネクタを追加し、適切な権限を設定する必要があります。
+
+2. データの取得と処理：
+   - アダプティブカードの結果を処理する際、選択されたユーザーの情報（例：メールアドレス、表示名など）を取得するための追加のステップが必要になる場合があります。
+
+3. パフォーマンスの考慮：
+   - 大規模な組織の場合、すべてのユーザーをリストに含めるとパフォーマンスに影響を与える可能性があります。必要に応じて、特定の部門や役割のユーザーに絞り込むことを検討してください。
+
+このアダプティブカードの使用方法や、Power Automateフロー内での統合方法について、さらに詳しい情報が必要な場合は、お気軽にお聞きください。​​​​​​​​​​​​​​​​ CopyChartToPowerPoint()
     Dim pptApp As Object
     Dim pptPres As Object
     Dim pptSlide As Object
