@@ -1,4 +1,104 @@
-はい、Office 365コネクタを利用して組織に属する人の選択を実装することができます。この場合、Power Automateの「People Picker」コントロールを使用します。これにより、組織内のユーザーを動的に選択できるようになります。
+はい、はい、アダプティブカードで直接人の選択を行いたいということですね。Power Automateのアダプティブカードには、標準で動的な人の選択機能が組み込まれていないため、少し工夫が必要です。
+
+Microsoft Teamsのアダプティブカードで使用できる「People Picker」コントロールを利用する方法を試してみましょう。ただし、この方法はTeams環境でのみ正常に動作し、他の環境では表示されない可能性があることに注意してください。
+
+以下に、Teamsの「People Picker」を使用したアダプティブカードの例を示します：
+
+
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "担当者を選択してください："
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "personSelection",
+            "style": "compact",
+            "isMultiSelect": false,
+            "choices": [],
+            "data": {
+                "@type": "microsoft.graph.user"
+            }
+        },
+        {
+            "type": "TextBlock",
+            "text": "優先度を選択してください："
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "prioritySelection",
+            "style": "expanded",
+            "isMultiSelect": false,
+            "choices": [
+                {
+                    "title": "高",
+                    "value": "high"
+                },
+                {
+                    "title": "中",
+                    "value": "medium"
+                },
+                {
+                    "title": "低",
+                    "value": "low"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "送信"
+        }
+    ]
+}
+```
+
+このアダプティブカードの実装について説明します：
+
+1. 人の選択（People Picker）：
+   - `"type": "Input.ChoiceSet"`を使用しています。
+   - `"data": { "@type": "microsoft.graph.user" }`を指定することで、Teamsの環境でPeople Pickerとして機能します。
+   - `"isMultiSelect": false`で単一選択になっています。複数選択にしたい場合は`true`に変更してください。
+
+2. 優先度選択（ラジオボタン）：
+   - 前回と同じ実装です。
+
+3. 送信ボタン：
+   - 変更はありません。
+
+この実装を使用する際の注意点：
+
+1. Teams環境での使用：
+   - この「People Picker」コントロールは主にMicrosoft Teams環境で動作します。Power Automateの他の環境（例：フローボタン、メール）では正常に表示されない可能性があります。
+
+2. バージョン指定：
+   - アダプティブカードのバージョンを1.5に指定しています。これはTeamsの最新機能をサポートするためです。
+
+3. データの処理：
+   - 選択された人物の情報は、通常ユーザーのAzure ADオブジェクトIDとして返されます。フロー内で追加の処理が必要になる場合があります。
+
+4. 権限設定：
+   - このコントロールを使用するには、アプリケーションに適切な権限（例：User.Read.All）が付与されている必要があります。
+
+このアダプティブカードをPower Automateのフロー内で使用する場合、以下の点に注意してください：
+
+1. Teams環境でのみ使用：
+   - このカードはTeamsチャネルやチャットに送信する場合にのみ、期待通りに動作します。
+
+2. 結果の処理：
+   - フロー内で、選択されたユーザーのIDを使用して追加の情報を取得する必要がある場合があります。
+
+3. テスト：
+   - 実際のTeams環境でテストし、正しく動作することを確認してください。
+
+この方法でも問題が解決しない場合や、Teams以外の環境で使用する必要がある場合は、別のアプローチを検討する必要があります。その場合、具体的な使用環境や要件をお知らせいただければ、適切な代替案を提案できるかもしれません。​​​​​​​​​​​​​​​​ 365コネクタを利用して組織に属する人の選択を実装することができます。この場合、Power Automateの「People Picker」コントロールを使用します。これにより、組織内のユーザーを動的に選択できるようになります。
 
 以下に、Office 365コネクタを使用して組織に属する人の選択を含むアダプティブカードの例を示します：
 
