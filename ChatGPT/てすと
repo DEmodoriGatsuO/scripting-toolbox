@@ -1,6 +1,113 @@
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
+  "version": "1.4",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "セクション1: ラジオボタン選択",
+      "weight": "Bolder",
+      "size": "Medium",
+      "separator": true
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "radioChoice1",
+      "style": "expanded",
+      "isMultiSelect": false,
+      "choices": [
+        {
+          "title": "True",
+          "value": "true"
+        },
+        {
+          "title": "False",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "セクション2: ラジオボタン選択",
+      "weight": "Bolder",
+      "size": "Medium",
+      "separator": true
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "radioChoice2",
+      "style": "expanded",
+      "isMultiSelect": false,
+      "choices": [
+        {
+          "title": "True",
+          "value": "true"
+        },
+        {
+          "title": "False",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "セクション3: 人の選択",
+      "weight": "Bolder",
+      "size": "Medium",
+      "separator": true
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "selectedPerson1",
+      "style": "compact",
+      "choices": [
+        {
+          "title": "John Doe",
+          "value": "john.doe@example.com"
+        },
+        {
+          "title": "Jane Smith",
+          "value": "jane.smith@example.com"
+        }
+        // 他の選択肢も追加
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "セクション4: 人の選択",
+      "weight": "Bolder",
+      "size": "Medium",
+      "separator": true
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "selectedPerson2",
+      "style": "compact",
+      "choices": [
+        {
+          "title": "John Doe",
+          "value": "john.doe@example.com"
+        },
+        {
+          "title": "Jane Smith",
+          "value": "jane.smith@example.com"
+        }
+        // 他の選択肢も追加
+      ]
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "送信"
+        }
+      ]
+    }
+  ]
+}
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
   "version": "1.3",
   "body": [
     {
