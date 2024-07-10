@@ -1,24 +1,622 @@
-キーエンス株式会社のSWOT分析を以下に具体的な数値指標を交えて説明します。
+# 窓販に関連する用語と概念
 
-### Strengths (強み)
-1. **技術革新と高性能製品**: キーエンスは新製品開発と研究開発に大規模な投資を行っており、2023年度の研究開発費用は約19億ドル（約2100億円）で、総売上高の約15%を占めています。また、キーエンスの製品はセンサーや測定機器、画像処理システムなどがあり、これにより市場での競争優位性を確保しています【27†source】【29†source】。
-2. **グローバルな存在感**: キーエンスは世界40カ国以上にオフィスを持ち、約3500人の従業員を抱えています。また、同社の製品は250,000社以上のクライアントによって利用されています【25†source】【27†source】。
+「窓販（まどはん）」は「窓口販売」の略で、主に銀行や信用金庫などの金融機関の窓口で保険商品を販売する形態を指します。以下に、窓販に関連するいくつかの重要な用語と概念を説明します。
 
-### Weaknesses (弱み)
-1. **高価格**: 高性能製品のため、製品価格が競争他社に比べて高く、価格競争力において弱みとなることがあります【28†source】。
-2. **依存市場**: 日本市場への依存度が高く、日本国内売上が全体の約50%を占めています。これにより、地域的な経済変動の影響を受けやすいです【26†source】【30†source】。
+## 窓販に関連する用語
 
-### Opportunities (機会)
-1. **新興市場での成長**: グローバルな自動化市場は2026年までに年平均成長率（CAGR）約8%で成長すると予測されており、キーエンスはこれにより市場拡大のチャンスを持っています【28†source】【30†source】。
-2. **技術革新**: IoT市場の成長が見込まれており、これに対応する新製品の開発と展開が期待されています。また、キーエンスのレーザーマーカーは3軸技術を使用しており、これにより製品番号、ロゴ、バーコードのマーキングが可能です【28†source】。
+| 用語                           | 説明                                                                                         |
+| ------------------------------ | -------------------------------------------------------------------------------------------- |
+| 窓口販売 (Window Sales)        | 銀行や信用金庫の窓口で行われる保険商品の販売。金融機関のスタッフが顧客に対して保険商品の説明や契約手続きを行う。 |
+| 販売代理店 (Sales Agent)       | 保険会社と契約し、保険商品を販売する代理店。銀行や信用金庫がこの役割を果たす場合も多い。                         |
+| バンカシュアランス (Bancassurance) | 銀行が保険商品を販売するビジネスモデル。バンク（銀行）とアシュアランス（保険）の合成語。                         |
+| 保険募集人 (Insurance Solicitor) | 保険契約の募集（販売）を行うために必要な資格を持つ人。銀行のスタッフがこの資格を取得して窓販を行う。             |
+| 対面販売 (Face-to-Face Sales)   | 顧客と直接対面して行う販売方法。窓販もこの一形態に含まれる。                                                 |
 
-### Threats (脅威)
-1. **競争激化**: 他の大手競合企業（例えば、オムロンや横河電機など）との競争が激化しており、技術革新のスピードが重要です【26†source】【31†source】。
-2. **経済変動**: グローバル経済の不確実性や自然災害（例：地震）が業績に大きな影響を与える可能性があります。例えば、2011年の東日本大震災では多くの製造業者が大きな打撃を受けました【28†source】【30†source】。
+## 窓販の特徴と利点
 
-### 参考リンク
-- [SWOT & PESTLE - Keyence Corporation](https://www.swotandpestle.com/keyence-corporation/)
-- [GlobalData - Keyence Corp SWOT Analysis](https://www.globaldata.com/store/report/keyence-corp-company-profile-swot-analysis/)
-- [MarketLine - Keyence Corporation Strategy, SWOT and Corporate Finance Report](https://www.marketresearch.com/MarketLine-v3883/Keyence-Corporation-Strategy-SWOT-Corporate-14015915/)
-- [MBA Skool - Keyence SWOT Analysis](https://www.mbaskool.com/brandguide/it-technology/16558-keyence.html)
-- [MarketResearch.com - Keyence Corp (6861) - Financial and Strategic SWOT Analysis Review](https://www.marketresearch.com/GlobalData-v3648/Keyence-Corp-Financial-Strategic-SWOT-12684227/)
+| 特徴/利点              | 説明                                                                                          |
+| --------------------- | -------------------------------------------------------------------------------------------- |
+| 信頼性                | 銀行や信用金庫など、顧客が信頼している金融機関の窓口で販売されるため、安心感がある。                              |
+| 利便性                | 既に銀行に口座を持っている顧客にとっては、同じ場所で金融サービスを一括して受けられるため便利。                            |
+| 専門的なアドバイス    | 銀行のスタッフが保険の専門知識を持っているため、適切なアドバイスを受けることができる。                                    |
+
+## 窓販の課題
+
+| 課題                   | 説明                                                                                          |
+| --------------------- | -------------------------------------------------------------------------------------------- |
+| 販売者の知識          | 窓販を行うスタッフが保険商品の詳細な知識を持っていない場合、適切なアドバイスができないリスクがある。                      |
+| 利益相反              | 銀行が自社に有利な保険商品を優先的に販売する可能性があり、顧客にとって最適な商品が提供されない場合がある。                  |
+
+窓販は銀行や信用金庫といった金融機関が保険会社との提携を強化し、顧客に多様な金融商品を提供する方法として広く利用されています。
+
+# 保険会社の新入社員向け用語集
+
+## 販売体系に関する用語
+
+| 用語                           | 説明                                                                                   |
+| ------------------------------ | -------------------------------------------------------------------------------------- |
+| 代理店 (Agency)                | 保険会社と契約して保険商品を販売する事業者。                                           |
+| 直販 (Direct Sales)            | 保険会社が直接顧客に対して保険商品を販売する方法。インターネットや電話を利用することが多い。 |
+| ブローカー (Broker)            | 複数の保険会社の商品を取り扱い、顧客に最適な商品を提案する仲介業者。                   |
+| チャネル (Channel)             | 保険商品を顧客に届けるための経路。代理店、直販、窓販などがある。                         |
+| クロスセル (Cross-Sell)        | 既存の顧客に対して別の保険商品を提案・販売すること。                                   |
+| アップセル (Up-Sell)           | 既存の契約をより高価なものに切り替えさせる販売手法。                                   |
+
+## 法律に関する用語
+
+| 用語                                       | 説明                                                                           |
+| ------------------------------------------ | ------------------------------------------------------------------------------ |
+| 保険業法 (Insurance Business Act)          | 保険会社の業務運営や監督に関する日本の法律。                                   |
+| 金融商品取引法 (Financial Instruments and Exchange Act) | 保険商品を含む金融商品の取引に関する法律。                                       |
+| 個人情報保護法 (Personal Information Protection Act)     | 顧客の個人情報を適切に取り扱うための法律。                                       |
+| 代理店法 (Agency Law)                      | 保険代理店の業務運営や監督に関する法律。                                       |
+| 反マネーロンダリング法 (Anti-Money Laundering Law)       | マネーロンダリング防止に関する法律。                                           |
+
+## マーケティング分析に関する用語
+
+| 用語                                          | 説明                                                                                       |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 市場セグメンテーション (Market Segmentation)  | 顧客を特定の基準でグループ分けし、ターゲット市場を明確にすること。                           |
+| ターゲティング (Targeting)                    | 市場セグメントの中から特定のターゲットを選び、そのグループに集中してマーケティング活動を行うこと。 |
+| ポジショニング (Positioning)                  | 競合他社との差別化を図り、自社商品を市場でどのように位置づけるかを決定すること。                   |
+| 顧客ライフタイムバリュー (Customer Lifetime Value, CLV) | 一人の顧客が生涯にわたってもたらす利益の総額。                                               |
+| リードジェネレーション (Lead Generation)      | 新たな顧客の見込みを集めるための活動。                                                       |
+| コンバージョン率 (Conversion Rate)            | 広告やマーケティング活動を通じて、実際に契約に至った顧客の割合。                               |
+| NPS (Net Promoter Score)                      | 顧客満足度を測る指標。顧客が他者にその商品やサービスを推奨する意向を測定する。                   |
+
+これらの用語は保険会社の新入社員が業務を理解し、効率的に働くために役立ちます。各分野の基本的な概念を押さえることで、日常業務や会議でのコミュニケーションがスムーズになります。
+
+保険代理店には、いくつかの属性（特徴）が存在し、これらは代理店の運営形態や専門性、提供するサービスなどに影響を与えます。以下に、保険代理店の主な属性を列挙します。
+
+### 保険代理店の主な属性
+
+1. **法人代理店と個人代理店**
+   - **法人代理店 (Corporate Agency)**: 法人格を持ち、複数の従業員がいる代理店。規模が大きく、多岐にわたる保険商品を取り扱うことが多い。
+   - **個人代理店 (Individual Agency)**: 個人事業主として運営される代理店。特定の地域やコミュニティに密着した営業を行う。
+
+2. **専門代理店と総合代理店**
+   - **専門代理店 (Specialized Agency)**: 特定の保険商品や特定の顧客層に特化した代理店。例として、企業向けの損害保険専門や医療保険専門の代理店がある。
+   - **総合代理店 (General Agency)**: 生命保険、損害保険、医療保険など、多種多様な保険商品を取り扱う代理店。
+
+3. **専属代理店と独立代理店**
+   - **専属代理店 (Exclusive Agency)**: 特定の保険会社と専属契約を結び、その会社の商品だけを販売する代理店。
+   - **独立代理店 (Independent Agency)**: 複数の保険会社の商品を取り扱い、顧客に最適な商品を選んで提案する代理店。
+
+4. **オンライン代理店と対面代理店**
+   - **オンライン代理店 (Online Agency)**: インターネットを通じて保険商品を販売する代理店。ウェブサイトやオンラインプラットフォームを活用する。
+   - **対面代理店 (Face-to-Face Agency)**: 実際のオフィスや店舗で顧客と対面し、直接コミュニケーションを取って販売する代理店。
+
+5. **地域密着型代理店と広域展開型代理店**
+   - **地域密着型代理店 (Local Agency)**: 特定の地域に焦点を当て、その地域の顧客に対して密接なサービスを提供する代理店。
+   - **広域展開型代理店 (Regional or National Agency)**: 広い地域や全国規模で展開し、多くの顧客を対象にサービスを提供する代理店。
+
+6. **フルサービス代理店とニッチサービス代理店**
+   - **フルサービス代理店 (Full-Service Agency)**: 保険の提案から契約、アフターサービスまで一貫して提供する代理店。
+   - **ニッチサービス代理店 (Niche Service Agency)**: 特定の分野やニッチな市場に特化してサービスを提供する代理店。
+
+7. **エージェンシーネットワーク**
+   - **エージェンシーネットワーク (Agency Network)**: 複数の独立した代理店がネットワークを形成し、情報共有や共同のマーケティング活動を行う。
+
+### 代理店に関連するその他の重要な概念
+
+- **コミッション (Commission)**: 代理店が保険商品を販売した際に保険会社から支払われる手数料。
+- **プロデューサー (Producer)**: 代理店内で保険商品の販売を担当するスタッフ。
+- **カスタマーリレーションシップマネジメント (Customer Relationship Management, CRM)**: 顧客情報を管理し、顧客との関係を強化するためのシステムや方法論。
+
+これらの属性は、保険代理店の運営や戦略、顧客対応の方法に影響を与えます。新入社員がこれらの属性を理解することで、代理店の特徴や強みを活かした営業活動が可能となります。
+{# 
+Sub BatchChangeSlideSize()
+    Dim pptApp As Object
+    Dim pptPres As Object
+    Dim pptSlide As Object
+    Dim folderPath As String
+    Dim fileName As String
+    Dim filePath As String
+
+    ' フォルダパスを指定します
+    folderPath = "C:\Path\To\Your\Presentations\"
+
+    ' PowerPointアプリケーションを取得
+    Set pptApp = CreateObject("PowerPoint.Application")
+    pptApp.Visible = True
+
+    ' フォルダ内の全ファイルをループ
+    fileName = Dir(folderPath & "*.pptx")
+    Do While fileName <> ""
+        filePath = folderPath & fileName
+
+        ' プレゼンテーションを開く
+        Set pptPres = pptApp.Presentations.Open(filePath)
+
+        ' スライドサイズを4:3に変更
+        pptPres.PageSetup.SlideWidth = 10 * 72 ' 4:3 の比率に対応する幅
+        pptPres.PageSetup.SlideHeight = 7.5 * 72 ' 4:3 の比率に対応する高さ
+
+        ' 保存して閉じる
+        pptPres.Save
+        pptPres.Close
+
+        ' 次のファイルへ
+        fileName = Dir
+    Loop
+
+    ' 終了
+    pptApp.Quit
+    Set pptApp = Nothing
+
+    MsgBox "全てのファイルのスライドサイズを4:3に変更しました。"
+End Sub
+
+Excel Script for Splitting Data by Unique Store Names
+
+## 概要
+このスクリプトは、指定された開始セル（C1セルの値を使用）からC列にある店舗名を取得し、重複を削除してユニークな店舗ごとに新しいシートを作成し、店舗別の結果を挿入します。C1セルの値を変更することで動的に対応可能です。
+
+## ファイル構成
+- `main.ts`: メインのExcelスクリプトファイル。以下の関数を含みます。
+  - `main(workbook: ExcelScript.Workbook)`: 指定された開始セルからC列のデータを取得し、各ユニークな店舗ごとに新しいシートを作成してデータを挿入します。
+
+## 使い方
+1. **スクリプトの追加**:
+   - Excelの「Automate」タブを開き、「スクリプトの作成」をクリックします。
+   - `main.ts`の内容をコピーして、Excelスクリプトエディタに貼り付けます。
+   - スクリプトに適切な名前を付けて保存します。
+
+2. **C1セルの設定**:
+   - C1セルに開始セルのアドレス（例：C2）を文字列として入力します。
+
+3. **スクリプトの実行**:
+   - 保存したスクリプトを実行します。
+
+## スクリプトの説明
+```typescript
+/**
+ * 作成者: ChatGPT
+ * 関数の目的: 指定された開始セル（C1セルの値を使用）からC列にある店舗名を取得し、
+ *              重複を削除してユニークな店舗ごとに新しいシートを作成し、店舗別の結果を挿入する。
+ */
+
+function main(workbook: ExcelScript.Workbook) {
+  // C1セルの値を文字列の定数として設定
+  const startCellAddress: string = "C1";
+  
+  // アクティブなシートを取得
+  const sheet: ExcelScript.Worksheet = workbook.getActiveWorksheet();
+  
+  // C1セルの値を開始セルとして取得（C1の値を変更することで動的に対応可能）
+  const startCell: ExcelScript.Range = sheet.getRange(startCellAddress);
+  
+  // シートの使用範囲を取得
+  const usedRange: ExcelScript.Range = sheet.getUsedRange();
+  
+  // 開始行と終了行のインデックスを取得
+  const startRow: number = startCell.getRowIndex();
+  const endRow: number = usedRange.getRowCount() - 1;
+  
+  // 開始セルの列インデックスを取得
+  const column: number = startCell.getColumnIndex();
+  
+  // C列のデータを格納するための配列を初期化
+  const storeData: string[] = [];
+  
+  // C列のデータをループで取得
+  for (let i = startRow; i <= endRow; i++) {
+    const cellValue: string = sheet.getCell(i, column).getValue() as string;
+    if (cellValue) {
+      storeData.push(cellValue); // 値が存在する場合のみ配列に追加
+    }
+  }
+
+  // 重複を削除してユニークな店舗名の配列を作成
+  const uniqueStores: string[] = Array.from(new Set(storeData));
+  
+  // 各店舗ごとに新しいシートを作成しデータを挿入
+  uniqueStores.forEach(store => {
+    // 店舗名に対応するシートを取得（存在しない場合は新規作成）
+    let storeSheet: ExcelScript.Worksheet = workbook.getWorksheet(store);
+    if (!storeSheet) {
+      storeSheet = workbook.addWorksheet(store); // 新しいシートを作成
+    } else {
+      storeSheet.getUsedRange()?.clear(); // 既存のデータをクリア
+    }
+    
+    // 元のシートから店舗データを抽出して配列に追加
+    const storeRows: (string | number | boolean)[][] = [];
+    for (let i = startRow; i <= endRow; i++) {
+      const cellValue: string = sheet.getCell(i, column).getValue() as string;
+      if (cellValue === store) {
+        storeRows.push(sheet.getRow(i).getValues()[0] as (string | number | boolean)[]); // 行データを配列に追加
+      }
+    }
+    
+    // 店舗ごとのシートにデータを挿入
+    if (storeRows.length > 0) {
+      storeSheet.getRangeByIndexes(0, 0, storeRows.length, storeRows[0].length).setValues(storeRows);
+    }
+  });
+}
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.4",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "セクション1: ラジオボタン選択",
+      "weight": "Bolder",
+      "size": "Medium",
+      "separator": true
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "radioChoice1",
+      "style": "expanded",
+      "isMultiSelect": false,
+      "choices": [
+        {
+          "title": "True",
+          "value": "true"
+        },
+        {
+          "title": "False",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "セクション2: ラジオボタン選択",
+      "weight": "Bolder",
+      "size": "Medium",
+      "separator": true
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "radioChoice2",
+      "style": "expanded",
+      "isMultiSelect": false,
+      "choices": [
+        {
+          "title": "True",
+          "value": "true"
+        },
+        {
+          "title": "False",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "セクション3: 人の選択",
+      "weight": "Bolder",
+      "size": "Medium",
+      "separator": true
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "selectedPerson1",
+      "style": "compact",
+      "choices": [
+        {
+          "title": "John Doe",
+          "value": "john.doe@example.com"
+        },
+        {
+          "title": "Jane Smith",
+          "value": "jane.smith@example.com"
+        }
+        // 他の選択肢も追加
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "セクション4: 人の選択",
+      "weight": "Bolder",
+      "size": "Medium",
+      "separator": true
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "selectedPerson2",
+      "style": "compact",
+      "choices": [
+        {
+          "title": "John Doe",
+          "value": "john.doe@example.com"
+        },
+        {
+          "title": "Jane Smith",
+          "value": "jane.smith@example.com"
+        }
+        // 他の選択肢も追加
+      ]
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "送信"
+        }
+      ]
+    }
+  ]
+}
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.3",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "組織の人を検索",
+      "weight": "Bolder",
+      "size": "Medium"
+    },
+    {
+      "type": "Input.Text",
+      "id": "searchQuery",
+      "placeholder": "名前や役職を入力"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "検索",
+          "data": {
+            "action": "search"
+          }
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "検索結果",
+      "weight": "Bolder",
+      "separator": true
+    },
+    {
+      "type": "Container",
+      "id": "searchResults",
+      "items": []
+    }
+  ]
+}はい、はい、アダプティブカードで直接人の選択を行いたいということですね。Power Automateのアダプティブカードには、標準で動的な人の選択機能が組み込まれていないため、少し工夫が必要です。
+
+Microsoft Teamsのアダプティブカードで使用できる「People Picker」コントロールを利用する方法を試してみましょう。ただし、この方法はTeams環境でのみ正常に動作し、他の環境では表示されない可能性があることに注意してください。
+
+以下に、Teamsの「People Picker」を使用したアダプティブカードの例を示します：
+
+
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "担当者を選択してください："
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "personSelection",
+            "style": "compact",
+            "isMultiSelect": false,
+            "choices": [],
+            "data": {
+                "@type": "microsoft.graph.user"
+            }
+        },
+        {
+            "type": "TextBlock",
+            "text": "優先度を選択してください："
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "prioritySelection",
+            "style": "expanded",
+            "isMultiSelect": false,
+            "choices": [
+                {
+                    "title": "高",
+                    "value": "high"
+                },
+                {
+                    "title": "中",
+                    "value": "medium"
+                },
+                {
+                    "title": "低",
+                    "value": "low"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "送信"
+        }
+    ]
+}
+```
+
+このアダプティブカードの実装について説明します：
+
+1. 人の選択（People Picker）：
+   - `"type": "Input.ChoiceSet"`を使用しています。
+   - `"data": { "@type": "microsoft.graph.user" }`を指定することで、Teamsの環境でPeople Pickerとして機能します。
+   - `"isMultiSelect": false`で単一選択になっています。複数選択にしたい場合は`true`に変更してください。
+
+2. 優先度選択（ラジオボタン）：
+   - 前回と同じ実装です。
+
+3. 送信ボタン：
+   - 変更はありません。
+
+この実装を使用する際の注意点：
+
+1. Teams環境での使用：
+   - この「People Picker」コントロールは主にMicrosoft Teams環境で動作します。Power Automateの他の環境（例：フローボタン、メール）では正常に表示されない可能性があります。
+
+2. バージョン指定：
+   - アダプティブカードのバージョンを1.5に指定しています。これはTeamsの最新機能をサポートするためです。
+
+3. データの処理：
+   - 選択された人物の情報は、通常ユーザーのAzure ADオブジェクトIDとして返されます。フロー内で追加の処理が必要になる場合があります。
+
+4. 権限設定：
+   - このコントロールを使用するには、アプリケーションに適切な権限（例：User.Read.All）が付与されている必要があります。
+
+このアダプティブカードをPower Automateのフロー内で使用する場合、以下の点に注意してください：
+
+1. Teams環境でのみ使用：
+   - このカードはTeamsチャネルやチャットに送信する場合にのみ、期待通りに動作します。
+
+2. 結果の処理：
+   - フロー内で、選択されたユーザーのIDを使用して追加の情報を取得する必要がある場合があります。
+
+3. テスト：
+   - 実際のTeams環境でテストし、正しく動作することを確認してください。
+
+この方法でも問題が解決しない場合や、Teams以外の環境で使用する必要がある場合は、別のアプローチを検討する必要があります。その場合、具体的な使用環境や要件をお知らせいただければ、適切な代替案を提案できるかもしれません。​​​​​​​​​​​​​​​​ 365コネクタを利用して組織に属する人の選択を実装することができます。この場合、Power Automateの「People Picker」コントロールを使用します。これにより、組織内のユーザーを動的に選択できるようになります。
+
+以下に、Office 365コネクタを使用して組織に属する人の選択を含むアダプティブカードの例を示します：
+
+
+
+```json
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "担当者を選択してください："
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "personSelection",
+            "choices": [],
+            "isMultiSelect": false,
+            "style": "compact",
+            "choices@data": {
+                "dataset": "graph.microsoft.com/users"
+            }
+        },
+        {
+            "type": "TextBlock",
+            "text": "優先度を選択してください："
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "prioritySelection",
+            "style": "expanded",
+            "isMultiSelect": false,
+            "choices": [
+                {
+                    "title": "高",
+                    "value": "high"
+                },
+                {
+                    "title": "中",
+                    "value": "medium"
+                },
+                {
+                    "title": "低",
+                    "value": "low"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "送信"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+この新しいアダプティブカードの実装について説明します：
+
+1. 組織に属する人の選択：
+   - "type": "Input.ChoiceSet"を使用しています。
+   - "choices@data": { "dataset": "graph.microsoft.com/users" } を指定することで、Office 365のユーザーリストを動的に取得します。
+   - "isMultiSelect": falseで、単一選択になっています。必要に応じて、trueに変更して複数選択にすることもできます。
+   - "style": "compact"で、ドロップダウンリスト形式で表示されます。
+
+2. ラジオボタン（優先度選択）：
+   - 前回の例と同じく実装されています。
+
+3. 送信ボタン：
+   - 前回の例と同じです。
+
+このJSONをPower Automateのアダプティブカードアクションに貼り付けて使用します。ただし、以下の点に注意してください：
+
+1. Office 365コネクタの設定：
+   - Power Automateのフロー内で、Office 365コネクタを追加し、適切な権限を設定する必要があります。
+
+2. データの取得と処理：
+   - アダプティブカードの結果を処理する際、選択されたユーザーの情報（例：メールアドレス、表示名など）を取得するための追加のステップが必要になる場合があります。
+
+3. パフォーマンスの考慮：
+   - 大規模な組織の場合、すべてのユーザーをリストに含めるとパフォーマンスに影響を与える可能性があります。必要に応じて、特定の部門や役割のユーザーに絞り込むことを検討してください。
+
+このアダプティブカードの使用方法や、Power Automateフロー内での統合方法について、さらに詳しい情報が必要な場合は、お気軽にお聞きください。​​​​​​​​​​​​​​​​ CopyChartToPowerPoint()
+    Dim pptApp As Object
+    Dim pptPres As Object
+    Dim pptSlide As Object
+    Dim xlChart As ChartObject
+    Dim slideIndex As Integer
+
+    ' PowerPointを起動または取得
+    On Error Resume Next
+    Set pptApp = GetObject(, "PowerPoint.Application")
+    If pptApp Is Nothing Then
+        Set pptApp = CreateObject("PowerPoint.Application")
+    End If
+    On Error GoTo 0
+    pptApp.Visible = True
+
+    ' 新しいプレゼンテーションを作成または既存のプレゼンテーションを開く
+    On Error Resume Next
+    Set pptPres = pptApp.ActivePresentation
+    If pptPres Is Nothing Then
+        Set pptPres = pptApp.Presentations.Add
+    End If
+    On Error GoTo 0
+
+    ' 新しいスライドを追加
+    slideIndex = pptPres.Slides.Count + 1
+    Set pptSlide = pptPres.Slides.Add(slideIndex, 12) ' 12はppLayoutTitleOnlyを表す定数
+
+    ' コピーするExcelグラフを指定
+    Set xlChart = ThisWorkbook.Sheets("Sheet1").ChartObjects("Chart 1") ' シート名とグラフ名を指定
+
+    ' グラフをコピー
+    xlChart.Chart.ChartArea.Copy
+
+    ' PowerPointにグラフを貼り付け
+    pptSlide.Shapes.PasteSpecial DataType:=2 ' 2はppPasteEnhancedMetafileを表す定数
+
+    ' 埋め込んだグラフを整列
+    With pptSlide.Shapes(pptSlide.Shapes.Count)
+        .LockAspectRatio = msoFalse
+        .Left = 100
+        .Top = 100
+        .Width = xlChart.Width
+        .Height = xlChart.Height
+    End With
+
+    ' オブジェクトを解放
+    Set xlChart = Nothing
+    Set pptSlide = Nothing
+    Set pptPres = Nothing
+    Set pptApp = Nothing
+
+    MsgBox "グラフをPowerPointに埋め込みました。"
+End Sub
