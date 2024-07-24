@@ -1,4 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#2589d0">
+<HTMLを使用してメールの本文をカスタマイズする方法を示します。宛名、タイトル、リンク付きテキストを含めるように、先ほどのPower AutomateフローのBody部分を修正します。
+
+### 修正案
+
+以下に、HTML形式のメール本文を含む修正版のBodyを示します。
+
+#### ステップ2: HTTP要求を送信 (HTTP アクション)
+
+- **メソッド**: `POST`
+- **URI**: `https://<あなたのSharePointサイト>.sharepoint.com/_api/SP.Utilities.Utility.SendEmail`
+- **ヘッダー**:
+  ```json
+  {
+    "Accept": "application/json; odata=nometadata",
+    "Content-Type": "application/json; odata=nometadata"
+  }
+  ```
+- **ボディ**:
+  ```json
+  {
+    "properties": {
+      "__metadata": {
+        "type": "SP.Utilities.EmailProperties"
+      },
+      "To": {
+        "results": ["recipient@example.com"]
+      },
+      "Subject": "新しいアイテムが追加されました",
+      "Body": "<html><body><p>こんにちは、<strong>Recipient Name</strong>さん。</p><p>新しいアイテムがSharePointリストに追加されました。詳しくは以下のリンクをご覧ください。</p><p><a href='https://<あなたのSharePointサイト>/lists/YourListName'>こちらをクリック</a></p><p>よろしくお願いいたします。</p></body></html>",
+      "From": "no-reply@example.com"
+    }
+  }
+  ```
+
+#### HTML本文の説明
+- `<html><body>...</body></html>`: HTMLドキュメントの基本構造です。
+- `<p>`: 段落を表します。宛名やメッセージを含む段落を作成しています。
+- `<strong>`: 太字にするためのタグです。宛名部分を強調しています。
+- `<a href='URL'>リンクテキスト</a>`: リンクを作成します。リンク付きテキストを含む段落を作成しています。
+
+### 注意点
+- **宛名部分**: `"Recipient Name"`の部分を実際の受信者の名前に置き換えてください。
+- **リンクURL**: `<あなたのSharePointサイト>/lists/YourListName`を実際のリストURLに置き換えてください。
+
+この修正版のボディを使用することで、HTML形式のメールを送信し、宛名、タイトル、リンク付きテキストを含めることができます。 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#2589d0">
     <circle cx="12" cy="2" r="0">
         <animate attributeName="r" values="0;2;0;0" dur="1s" repeatCount="indefinite" begin="0"
                  keySplines=".2 .2 .4 .8;.2 .2 .4 .8;.2 .2 .4 .8" calcMode="spline"/>
