@@ -1,0 +1,37 @@
+graph TD
+    A[main] --> B[process_xlsb_files]
+    B --> C[check_file_existence]
+    B --> D[read_input_file]
+    B --> E[process_files]
+    B --> F[write_output]
+    B --> G[send_api_data]
+
+    C --> H[os.path.exists]
+    D --> I[open CSV/TXT]
+    E --> J[check_words_in_xlsb]
+    J --> K[open_workbook]
+    J --> L[process_sheets]
+    L --> M[process_rows]
+    M --> N[process_cells]
+    N --> O[check_word_match]
+
+    F --> P[csv.writer]
+    G --> Q[requests.post]
+
+    subgraph Libraries
+        R[os]
+        S[csv]
+        T[datetime]
+        U[logging]
+        V[socket]
+        W[requests]
+        X[pyxlsb]
+    end
+
+    B --> R
+    B --> S
+    B --> T
+    B --> U
+    B --> V
+    B --> W
+    J --> X
