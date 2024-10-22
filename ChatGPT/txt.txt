@@ -1,41 +1,12 @@
-<div style="margin-bottom: 25px;">
-    <h1 style="color: #2c3e50; font-size: 24px; font-weight: 600; margin: 0 0 15px 0;">取引時確認チェックリスト</h1>
-    <table style="width: 100%; border-collapse: separate; border-spacing: 0;">
-        <tr>
-            <td style="padding: 8px 20px 8px 0; width: 25%; white-space: nowrap;">
-                <span style="font-size: 14px; color: #7f8c8d;">管理番号：</span>
-                <span style="font-size: 14px; color: #34495e; margin-left: 8px;">ABC-2024-001</span>
-            </td>
-            <td style="padding: 8px 20px 8px 0; width: 25%; white-space: nowrap;">
-                <span style="font-size: 14px; color: #7f8c8d;">部門コード：</span>
-                <span style="font-size: 14px; color: #34495e; margin-left: 8px;">DEPT-001</span>
-            </td>
-            <td style="padding: 8px 20px 8px 0; width: 25%; white-space: nowrap;">
-                <span style="font-size: 14px; color: #7f8c8d;">申請区分：</span>
-                <span style="font-size: 14px; color: #34495e; margin-left: 8px;">新規登録</span>
-            </td>
-            <td style="padding: 8px 0; width: 25%; white-space: nowrap;">
-                <span style="font-size: 14px; color: #7f8c8d;">処理状況：</span>
-                <span style="font-size: 14px; color: #e74c3c; margin-left: 8px;">確認中</span>
-            </td>
-        </tr>
-        <tr>
-            <td style="padding: 8px 20px 8px 0; white-space: nowrap;">
-                <span style="font-size: 14px; color: #7f8c8d;">作成日：</span>
-                <span style="font-size: 14px; color: #34495e; margin-left: 8px;">2024/10/22</span>
-            </td>
-            <td style="padding: 8px 20px 8px 0; white-space: nowrap;">
-                <span style="font-size: 14px; color: #7f8c8d;">申請者：</span>
-                <span style="font-size: 14px; color: #34495e; margin-left: 8px;">山田 太郎</span>
-            </td>
-            <td style="padding: 8px 20px 8px 0; white-space: nowrap;">
-                <span style="font-size: 14px; color: #7f8c8d;">所属部門：</span>
-                <span style="font-size: 14px; color: #34495e; margin-left: 8px;">営業第一部</span>
-            </td>
-            <td style="padding: 8px 0; white-space: nowrap;">
-                <span style="font-size: 14px; color: #7f8c8d;">優先度：</span>
-                <span style="font-size: 14px; color: #34495e; margin-left: 8px;">通常</span>
-            </td>
-        </tr>
-    </table>
-</div>
+                    <div style="display: flex; gap: 30px;">
+                        <label style="display: inline-flex; align-items: center; gap: 8px; cursor: not-allowed;">
+                            <input type="radio" name="purpose_check" checked disabled 
+                                   style="width: 18px; height: 18px; accent-color: #27ae60; cursor: not-allowed;">
+                            <span style="font-size: 14px; color: #27ae60;">確認済</span>
+                        </label>
+                        <label style="display: inline-flex; align-items: center; gap: 8px; cursor: not-allowed;">
+                            <input type="radio" name="purpose_check" disabled 
+                                   style="width: 18px; height: 18px; accent-color: #e74c3c; cursor: not-allowed; opacity: 0.5;">
+                            <span style="font-size: 14px; color: #7f8c8d;">未確認</span>
+                        </label>
+                    </div>
