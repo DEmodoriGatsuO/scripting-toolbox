@@ -1,12 +1,63 @@
-                    <div style="display: flex; gap: 30px;">
-                        <label style="display: inline-flex; align-items: center; gap: 8px; cursor: not-allowed;">
-                            <input type="radio" name="purpose_check" checked disabled 
-                                   style="width: 18px; height: 18px; accent-color: #27ae60; cursor: not-allowed;">
-                            <span style="font-size: 14px; color: #27ae60;">確認済</span>
-                        </label>
-                        <label style="display: inline-flex; align-items: center; gap: 8px; cursor: not-allowed;">
-                            <input type="radio" name="purpose_check" disabled 
-                                   style="width: 18px; height: 18px; accent-color: #e74c3c; cursor: not-allowed; opacity: 0.5;">
-                            <span style="font-size: 14px; color: #7f8c8d;">未確認</span>
-                        </label>
-                    </div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>承認ワークフロー進捗状況</title>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f7f9fc; margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+    <div style="background-color: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 1200px; width: 100%; overflow-x: auto;">
+        <table style="width: 100%; border-collapse: separate; border-spacing: 0; min-width: 900px;">
+            <!-- ヘッダー行 -->
+            <tr style="background-color: #f8f9fa;">
+                <th style="padding: 15px; font-size: 14px; color: #7f8c8d; font-weight: 600; text-align: center; border-bottom: 2px solid #eee; width: 80px;">段階</th>
+                <th style="padding: 15px; font-size: 14px; color: #7f8c8d; font-weight: 600; text-align: left; border-bottom: 2px solid #eee; width: 200px;">承認フェーズ</th>
+                <th style="padding: 15px; font-size: 14px; color: #7f8c8d; font-weight: 600; text-align: left; border-bottom: 2px solid #eee;">詳細</th>
+                <th style="padding: 15px; font-size: 14px; color: #7f8c8d; font-weight: 600; text-align: left; border-bottom: 2px solid #eee; width: 120px;">承認者</th>
+                <th style="padding: 15px; font-size: 14px; color: #7f8c8d; font-weight: 600; text-align: left; border-bottom: 2px solid #eee; width: 150px;">承認者部署</th>
+                <th style="padding: 15px; font-size: 14px; color: #7f8c8d; font-weight: 600; text-align: center; border-bottom: 2px solid #eee; width: 120px;">承認日</th>
+            </tr>
+
+            <!-- 申請 -->
+            <tr>
+                <td style="padding: 15px; text-align: center; font-size: 14px; color: #34495e;">1</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e; font-weight: 500;">申請</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e;">新規取引先登録申請の起案</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e;">山田 太郎</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e;">営業第一部</td>
+                <td style="padding: 15px; text-align: center; font-size: 14px; color: #34495e;">2024/10/22</td>
+            </tr>
+
+            <!-- 一次承認 -->
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 15px; text-align: center; font-size: 14px; color: #34495e;">2</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e; font-weight: 500;">一次承認</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e;">申請内容の確認と本人確認書類の検証</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e;">佐藤 次郎</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e;">営業管理部</td>
+                <td style="padding: 15px; text-align: center; font-size: 14px; color: #34495e;">2024/10/23</td>
+            </tr>
+
+            <!-- 二次承認 -->
+            <tr>
+                <td style="padding: 15px; text-align: center; font-size: 14px; color: #34495e;">3</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e; font-weight: 500;">二次承認</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e;">反社チェックと取引条件の確認</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e;">鈴木 三郎</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e;">法務部</td>
+                <td style="padding: 15px; text-align: center; font-size: 14px; color: #7f8c8d;">-</td>
+            </tr>
+
+            <!-- 最終承認 -->
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 15px; text-align: center; font-size: 14px; color: #34495e;">4</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e; font-weight: 500;">最終承認</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e;">取引開始の最終判断</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e;">田中 部長</td>
+                <td style="padding: 15px; font-size: 14px; color: #34495e;">営業部門</td>
+                <td style="padding: 15px; text-align: center; font-size: 14px; color: #7f8c8d;">-</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
