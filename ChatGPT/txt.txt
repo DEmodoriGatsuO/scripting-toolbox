@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多段階確認チェックリスト</title>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f7f9fc; margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+    <div style="background-color: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 1000px; width: 100%; overflow-x: auto;">
+        <h2 style="color: #2c3e50; font-size: 28px; margin-bottom: 30px; text-align: center; font-weight: 300;">確認プロセスチェックリスト</h2>
+        
+        <table style="width: 100%; border-collapse: separate; border-spacing: 0; min-width: 800px;">
+            <!-- ヘッダー行 -->
+            <tr>
+                <th style="padding: 15px; text-align: left; font-size: 14px; color: #7f8c8d; font-weight: 600; width: 250px; border-bottom: 2px solid #eee;">確認項目</th>
+                <th style="padding: 15px; text-align: center; font-size: 14px; color: #7f8c8d; font-weight: 600; width: 120px; border-bottom: 2px solid #eee;">
+                    <div>一次確認</div>
+                    <div style="font-size: 12px; font-weight: normal; margin-top: 4px;">営業担当</div>
+                </th>
+                <th style="padding: 15px; text-align: center; font-size: 14px; color: #7f8c8d; font-weight: 600; width: 120px; border-bottom: 2px solid #eee;">
+                    <div>二次確認</div>
+                    <div style="font-size: 12px; font-weight: normal; margin-top: 4px;">管理者</div>
+                </th>
+                <th style="padding: 15px; text-align: center; font-size: 14px; color: #7f8c8d; font-weight: 600; width: 120px; border-bottom: 2px solid #eee;">
+                    <div>最終承認</div>
+                    <div style="font-size: 12px; font-weight: normal; margin-top: 4px;">部門長</div>
+                </th>
+            </tr>
+
+            <!-- 確認項目1 -->
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 20px;">
+                    <div style="font-size: 15px; color: #34495e; font-weight: 500;">本人確認書類の確認</div>
+                    <div style="font-size: 13px; color: #7f8c8d; margin-top: 4px;">身分証明書の有効期限と記載内容を確認</div>
+                </td>
+                <td style="text-align: center; padding: 20px;">
+                    <div style="position: relative;">
+                        <input type="checkbox" checked readonly 
+                               style="width: 20px; height: 20px; accent-color: #27ae60; cursor: not-allowed;">
+                        <div style="font-size: 11px; color: #7f8c8d; margin-top: 4px;">2024/10/22</div>
+                        <div style="font-size: 11px; color: #27ae60;">鈴木</div>
+                    </div>
+                </td>
+                <td style="text-align: center; padding: 20px;">
+                    <div style="position: relative;">
+                        <input type="checkbox" checked readonly 
+                               style="width: 20px; height: 20px; accent-color: #27ae60; cursor: not-allowed;">
+                        <div style="font-size: 11px; color: #7f8c8d; margin-top: 4px;">2024/10/22</div>
+                        <div style="font-size: 11px; color: #27ae60;">佐藤</div>
+                    </div>
+                </td>
+                <td style="text-align: center; padding: 20px;">
+                    <div style="position: relative;">
+                        <input type="checkbox" checked readonly 
+                               style="width: 20px; height: 20px; accent-color: #27ae60; cursor: not-allowed;">
+                        <div style="font-size: 11px; color: #7f8c8d; margin-top: 4px;">2024/10/23</div>
+                        <div style="font-size: 11px; color: #27ae60;">田中</div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- 確認項目2 -->
+            <tr>
+                <td style="padding: 20px;">
+                    <div style="font-size: 15px; color: #34495e; font-weight: 500;">反社会的勢力でないことの確認</div>
+                    <div style="font-size: 13px; color: #7f8c8d; margin-top: 4px;">データベース照会による確認完了</div>
+                </td>
+                <td style="text-align: center; padding: 20px;">
+                    <div style="position: relative;">
+                        <input type="checkbox" checked readonly 
+                               style="width: 20px; height: 20px; accent-color: #27ae60; cursor: not-allowed;">
+                        <div style="font-size: 11px; color: #7f8c8d; margin-top: 4px;">2024/10/22</div>
+                        <div style="font-size: 11px; color: #27ae60;">鈴木</div>
+                    </div>
+                </td>
+                <td style="text-align: center; padding: 20px;">
+                    <div style="position: relative;">
+                        <input type="checkbox" readonly 
+                               style="width: 20px; height: 20px; accent-color: #e74c3c; cursor: not-allowed;">
+                        <div style="font-size: 11px; color: #7f8c8d; margin-top: 4px;">-</div>
+                        <div style="font-size: 11px; color: #e74c3c;">未確認</div>
+                    </div>
+                </td>
+                <td style="text-align: center; padding: 20px;">
+                    <div style="position: relative;">
+                        <input type="checkbox" readonly 
+                               style="width: 20px; height: 20px; accent-color: #e74c3c; cursor: not-allowed;">
+                        <div style="font-size: 11px; color: #7f8c8d; margin-top: 4px;">-</div>
+                        <div style="font-size: 11px; color: #e74c3c;">未確認</div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- 確認項目3 -->
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 20px;">
+                    <div style="font-size: 15px; color: #34495e; font-weight: 500;">取引目的の確認</div>
+                    <div style="font-size: 13px; color: #7f8c8d; margin-top: 4px;">ヒアリングによる確認</div>
+                </td>
+                <td style="text-align: center; padding: 20px;">
+                    <div style="position: relative;">
+                        <input type="checkbox" checked readonly 
+                               style="width: 20px; height: 20px; accent-color: #27ae60; cursor: not-allowed;">
+                        <div style="font-size: 11px; color: #7f8c8d; margin-top: 4px;">2024/10/22</div>
+                        <div style="font-size: 11px; color: #27ae60;">鈴木</div>
+                    </div>
+                </td>
+                <td style="text-align: center; padding: 20px;">
+                    <div style="position: relative;">
+                        <input type="checkbox" checked readonly 
+                               style="width: 20px; height: 20px; accent-color: #27ae60; cursor: not-allowed;">
+                        <div style="font-size: 11px; color: #7f8c8d; margin-top: 4px;">2024/10/22</div>
+                        <div style="font-size: 11px; color: #27ae60;">佐藤</div>
+                    </div>
+                </td>
+                <td style="text-align: center; padding: 20px;">
+                    <div style="position: relative;">
+                        <input type="checkbox" readonly 
+                               style="width: 20px; height: 20px; accent-color: #e74c3c; cursor: not-allowed;">
+                        <div style="font-size: 11px; color: #7f8c8d; margin-top: 4px;">-</div>
+                        <div style="font-size: 11px; color: #e74c3c;">未確認</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- 確認完了ステータス -->
+        <div style="margin-top: 30px; padding: 15px; background-color: #fef2f2; border-radius: 8px; text-align: center;">
+            <div style="font-size: 16px; color: #e74c3c; font-weight: 600;">確認プロセス進行中</div>
+            <p style="font-size: 14px; color: #7f8c8d; margin: 5px 0 0;">一部の確認項目が未完了です</p>
+        </div>
+    </div>
+</body>
+</html>
