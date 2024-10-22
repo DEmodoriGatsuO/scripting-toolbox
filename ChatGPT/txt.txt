@@ -1,52 +1,37 @@
-<div style="background-color: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 800px; width: 100%;">
-    <!-- 質問1 -->
-    <div style="margin-bottom: 30px;">
-        <div style="font-size: 16px; color: #2c3e50; font-weight: 600; margin-bottom: 8px;">取引開始の目的</div>
-        <div style="font-size: 14px; color: #7f8c8d; margin-bottom: 12px;">新規取引先として取引を開始する目的と期待する効果を確認してください。</div>
-        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; font-size: 14px; color: #34495e;">新規事業における主要サプライヤーとして取引を開始。当社の新製品開発において重要な部材の調達先として期待。納期と品質において高い実績を持つ企業であり、安定した調達体制の確立を目指す。</div>
-    </div>
+<div style="background-color: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 1200px; width: 100%; overflow-x: auto;">
+    <table style="width: 100%; border-collapse: separate; border-spacing: 0; min-width: 900px;">
+        <!-- ヘッダー行 -->
+        <tr style="background-color: #f8f9fa;">
+            <th style="padding: 15px; font-size: 14px; color: #7f8c8d; font-weight: 600; text-align: center; border-bottom: 2px solid #eee; width: 100px;">点検段階</th>
+            <th style="padding: 15px; font-size: 14px; color: #7f8c8d; font-weight: 600; text-align: left; border-bottom: 2px solid #eee; width: 120px;">点検担当者名</th>
+            <th style="padding: 15px; font-size: 14px; color: #7f8c8d; font-weight: 600; text-align: left; border-bottom: 2px solid #eee; width: 150px;">点検担当者部署</th>
+            <th style="padding: 15px; font-size: 14px; color: #7f8c8d; font-weight: 600; text-align: center; border-bottom: 2px solid #eee; width: 100px;">結果</th>
+            <th style="padding: 15px; font-size: 14px; color: #7f8c8d; font-weight: 600; text-align: left; border-bottom: 2px solid #eee;">コメント</th>
+            <th style="padding: 15px; font-size: 14px; color: #7f8c8d; font-weight: 600; text-align: center; border-bottom: 2px solid #eee; width: 120px;">日付</th>
+        </tr>
 
-    <!-- 質問2 -->
-    <div style="margin-bottom: 30px;">
-        <div style="font-size: 16px; color: #2c3e50; font-weight: 600; margin-bottom: 8px;">年間取引想定額</div>
-        <div style="font-size: 14px; color: #7f8c8d; margin-bottom: 12px;">年間の取引予定金額と取引頻度について確認してください。</div>
-        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; font-size: 14px; color: #34495e;">想定年間取引額：約1億2000万円
-取引頻度：月次の定期発注（製品製造に伴う部材調達）</div>
-    </div>
+        <!-- 一次点検 -->
+        <tr>
+            <td style="padding: 15px; text-align: center; font-size: 14px; color: #34495e; font-weight: 500;">一次点検</td>
+            <td style="padding: 15px; font-size: 14px; color: #34495e;">山田 太郎</td>
+            <td style="padding: 15px; font-size: 14px; color: #34495e;">品質管理課</td>
+            <td style="padding: 15px; text-align: center;">
+                <span style="font-size: 14px; color: #27ae60; font-weight: 500;">合格</span>
+            </td>
+            <td style="padding: 15px; font-size: 14px; color: #34495e;">基準値内での動作を確認。温度上昇も許容範囲内。振動・騒音レベルも正常値。定期メンテナンス実施済み。</td>
+            <td style="padding: 15px; text-align: center; font-size: 14px; color: #34495e;">2024/10/22</td>
+        </tr>
 
-    <!-- 質問3 -->
-    <div style="margin-bottom: 30px;">
-        <div style="font-size: 16px; color: #2c3e50; font-weight: 600; margin-bottom: 8px;">信用調査結果</div>
-        <div style="font-size: 14px; color: #7f8c8d; margin-bottom: 12px;">外部信用調査機関による調査結果を確認してください。</div>
-        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; font-size: 14px; color: #34495e;">信用評価：A（5段階評価）
-直近3年間の業績：安定成長
-財務健全性：良好
-特記事項：特になし</div>
-    </div>
-
-    <!-- 質問4 -->
-    <div style="margin-bottom: 30px;">
-        <div style="font-size: 16px; color: #2c3e50; font-weight: 600; margin-bottom: 8px;">反社会的勢力チェック</div>
-        <div style="font-size: 14px; color: #7f8c8d; margin-bottom: 12px;">データベース照会による確認結果を記載してください。</div>
-        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; font-size: 14px; color: #34495e;">データベース照会日：2024/10/22
-照会結果：該当なし
-確認者：法務部 鈴木
-備考：過去3年分の新聞報道等についても確認済み</div>
-    </div>
-
-    <!-- 質問5 -->
-    <div style="margin-bottom: 30px;">
-        <div style="font-size: 16px; color: #2c3e50; font-weight: 600; margin-bottom: 8px;">契約条件の確認</div>
-        <div style="font-size: 14px; color: #7f8c8d; margin-bottom: 12px;">取引基本契約に関する合意状況を確認してください。</div>
-        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; font-size: 14px; color: #34495e;">支払条件：検収後60日
-取引基本契約：当社標準契約での合意
-特記事項：品質保証条項について別途覚書を締結予定
-契約書確認：法務部確認済み</div>
-    </div>
-
-    <!-- 特記事項 -->
-    <div style="background-color: #fff3e0; padding: 20px; border-radius: 8px; margin-top: 40px;">
-        <div style="font-size: 16px; color: #e67e22; font-weight: 600; margin-bottom: 10px;">特記事項</div>
-        <div style="font-size: 14px; color: #34495e;">初回取引は試験的な少量発注からスタートし、品質・納期を確認後、本格的な取引を開始する計画。品質管理部による工場監査は2024年11月に実施予定。</div>
-    </div>
+        <!-- 最終点検 -->
+        <tr style="background-color: #f8f9fa;">
+            <td style="padding: 15px; text-align: center; font-size: 14px; color: #34495e; font-weight: 500;">最終点検</td>
+            <td style="padding: 15px; font-size: 14px; color: #34495e;">佐藤 次郎</td>
+            <td style="padding: 15px; font-size: 14px; color: #34495e;">品質管理部</td>
+            <td style="padding: 15px; text-align: center;">
+                <span style="font-size: 14px; color: #27ae60; font-weight: 500;">合格</span>
+            </td>
+            <td style="padding: 15px; font-size: 14px; color: #34495e;">一次点検内容を確認。安全装置の動作確認実施。年次点検項目について全て合格。次回点検は6ヶ月後に予定。</td>
+            <td style="padding: 15px; text-align: center; font-size: 14px; color: #34495e;">2024/10/23</td>
+        </tr>
+    </table>
 </div>
