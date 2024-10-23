@@ -1,53 +1,62 @@
-// HTML文字列
-$"<div style='{GridStyles}'>
-    <div style='{FormGroupStyle}'>
-        <div style='{LabelContainerStyle}'>
-            <span style='{LabelTextStyle}'>{"Lable1"}</span>
-        </div>
-        <div style='{InputContainerStyle}'>
-            <input type='text' value='{"Value1"}' readonly style='{InputBaseStyle}'>
-        </div>
-    </div>
-    <div style='{FormGroupStyle}'>
-        <div style='{LabelContainerStyle}'>
-            <span style='{LabelTextStyle}'>{"Lable2"}</span>
-        </div>
-        <div style='{InputContainerStyle}'>
-            <input type='text' value='{"Value2"}' readonly style='{InputBaseStyle}'>
-        </div>
-    </div>
-    <div style='{FormGroupStyle}'>
-        <div style='{LabelContainerStyle}'>
-            <span style='{LabelTextStyle}'>{"Lable3"}</span>
-        </div>
-        <div style='{InputContainerStyle}'>
-            <input type='text' value='{"Value3"}' readonly style='{InputBaseStyle}'>
-        </div>
-    </div>
-    <div style='{FormGroupStyle}'>
-        <div style='{LabelContainerStyle}'>
-            <span style='{LabelTextStyle}'>{"Lable4"}</span>
-        </div>
-        <div style='{RadioContainerStyle}'>
-            <div style='{RadioGroupStyle}'>
+$"<table style='width: 100%; border-collapse: separate; border-spacing: 15px 10px;'>
+    <tr>
+        <td style='width: 15%; white-space: nowrap;'>
+            <span style='{LabelBaseStyle}'>{"cell1"}</span>
+        </td>
+        <td style='width: 35%;'>
+            <input type='text' value='{"cell1"}' readonly style='{InputBaseStyle}'>
+        </td>
+        <td style='width: 15%; white-space: nowrap;'>
+            <span style='{LabelBaseStyle}'>{"cell2"}</span>
+        </td>
+        <td style='width: 35%;'>
+            <input type='text' value='{"cell2"}' readonly style='{InputBaseStyle}'>
+        </td>
+    </tr>
+    <tr>
+        <td style='width: 15%; white-space: nowrap;'>
+            <span style='{LabelBaseStyle}'>{"cell3"}</span>
+        </td>
+        <td style='width: 35%;'>
+            <input type='text' value='{"cell3"}' readonly style='{InputBaseStyle}'>
+        </td>
+        <td style='width: 15%; white-space: nowrap;'>
+            <span style='{LabelBaseStyle}'>{"cell4"}</span>
+        </td>
+        <td>
+            <div style='{RadioContainerStyle}'>
                 <label style='{RadioLabelStyle}'>
-                    <input type='radio' name='check_1' checked disabled style='{RadioCheckedStyle}'>
-                    <span style='{TextSuccessStyle}'>{"radio1"}</span>
+                    <input type='radio' name='trade_type' checked disabled style='{RadioCheckedStyle}'>
+                    <span style='{TextSuccessStyle}'>{"cell4"}</span>
                 </label>
                 <label style='{RadioLabelStyle}'>
-                    <input type='radio' name='check_1' disabled style='{RadioUncheckedStyle}'>
-                    <span style='{TextSecondaryStyle}'>{"radio2"}</span>
+                    <input type='radio' name='trade_type' disabled style='{RadioUncheckedStyle}'>
+                    <span style='{TextSecondaryStyle}'>{"cell4"}</span>
                 </label>
             </div>
-        </div>
-    </div>
-</div>
-<div style='{FormGroupStyle}; margin-top: 20px;'>
-    <div style='{LabelContainerStyle}'>
-        <span style='{LabelTextStyle}'>{"Lable5"}</span>
-    </div>
-    <div style='{InputContainerStyle}'>
-        <textarea readonly style='{InputBaseStyle}; min-height: 40px; resize: none;'>{"Value5"}</textarea>
-    </div>
-</div>
-"
+        </td>
+    </tr>
+    <tr>
+        <td style='white-space: nowrap;'>
+            <span style='{LabelBaseStyle}'>{"cell5"}</span>
+        </td>
+        <td colspan='3'>
+            <div style='{InputBaseStyle}; color: {ColorSecondary};'>
+                {"cell5"}
+            </div>
+        </td>
+    </tr>
+</table>"
+
+ColorBase = "#333333";
+ColorSecondary = "#666666";
+ColorSuccess = "#27ae60";
+ColorBackground = "#eeeeee";
+LabelBaseStyle = $"font-size: 14px; color: {ColorBase}; font-weight: bold; display: inline-block; padding: 12px 0;";
+InputBaseStyle = $"width: 100%; padding: 12px; font-size: 16px; border: none; border-radius: 8px; background-color: {ColorBackground}; color: {ColorBase}; box-sizing: border-box; transition: all 0.3s ease;";
+RadioContainerStyle = $"display: flex; gap: 20px; padding: 12px; background-color: {ColorBackground}; border-radius: 8px;";
+RadioLabelStyle = "display: inline-flex; align-items: center; gap: 8px; cursor: default;";
+RadioCheckedStyle = $"width: 18px; height: 18px; accent-color: {ColorSuccess}; cursor: not-allowed;";
+RadioUncheckedStyle = $"width: 18px; height: 18px; accent-color: {ColorSecondary}; cursor: not-allowed; opacity: 0.5;";
+TextSuccessStyle = $"font-size: 16px; color: {ColorSuccess};";
+TextSecondaryStyle = $"font-size: 16px; color: {ColorSecondary};";
