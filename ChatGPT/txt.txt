@@ -17,8 +17,17 @@ $"<table style='width: 100%; border-collapse: separate; border-spacing: 15px 10p
         <td style='width: 15%; white-space: nowrap;'>
             <span style='{LabelBaseStyle}'>{"cell3"}</span>
         </td>
-        <td style='width: 35%;'>
-            <input type='text' value='{"cell3"}' readonly style='{InputBaseStyle}'>
+        <td>
+            <div style='{RadioContainerStyle}'>
+                <label style='{RadioLabelStyle}'>
+                    <input type='radio' name='trade_type' checked disabled style='{RadioCheckedStyle}'>
+                    <span style='{TextSuccessStyle}'>{"cell4"}</span>
+                </label>
+                <label style='{RadioLabelStyle}'>
+                    <input type='radio' name='trade_type' disabled style='{RadioUncheckedStyle}'>
+                    <span style='{TextSecondaryStyle}'>{"cell4"}</span>
+                </label>
+            </div>
         </td>
         <td style='width: 15%; white-space: nowrap;'>
             <span style='{LabelBaseStyle}'>{"cell4"}</span>
@@ -32,7 +41,24 @@ $"<table style='width: 100%; border-collapse: separate; border-spacing: 15px 10p
                 <label style='{RadioLabelStyle}'>
                     <input type='radio' name='trade_type' disabled style='{RadioUncheckedStyle}'>
                     <span style='{TextSecondaryStyle}'>{"cell4"}</span>
-                </label>
+                </label>       
+        </td>
+    </tr>
+    <tr>
+        <td style='white-space: nowrap;'>
+            <span style='{LabelBaseStyle}'>{"cell5"}</span>
+        </td>
+        <td>
+            <div style='{InputBaseStyle}; color: {ColorSecondary};'>
+                {"cell5"}
+            </div>
+        </td>
+        <td style='white-space: nowrap;'>
+            <span style='{LabelBaseStyle}'>{"cell5"}</span>
+        </td>
+        <td>
+            <div style='{InputBaseStyle}; color: {ColorSecondary};'>
+                {"cell5"}
             </div>
         </td>
     </tr>
@@ -46,17 +72,58 @@ $"<table style='width: 100%; border-collapse: separate; border-spacing: 15px 10p
             </div>
         </td>
     </tr>
+    <tr>
+        <td style='white-space: nowrap;'>
+            <span style='{LabelBaseStyle}'>{"cell5"}</span>
+        </td>
+        <td>
+            <div style='{InputBaseStyle}; color: {ColorSecondary};'>
+                {"cell5"}
+            </div>
+        </td>
+        <td style='white-space: nowrap;'>
+            <span style='{LabelBaseStyle}'>{"cell5"}</span>
+        </td>
+        <td>
+            <div style='{InputBaseStyle}; color: {ColorSecondary};'>
+                {"cell5"}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td style='white-space: nowrap;'>
+            <span style='{LabelBaseStyle}'>{"cell5"}</span>
+        </td>
+        <td>
+            <div style='{InputBaseStyle}; color: {ColorSecondary};'>
+                {"cell5"}
+            </div>
+        </td>
+        <td style='white-space: nowrap;'>
+            <span style='{LabelBaseStyle}'>{"cell5"}</span>
+        </td>
+        <td>
+            <div style='{InputBaseStyle}; color: {ColorSecondary};'>
+                {"cell5"}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td style='white-space: nowrap;'>
+            <span style='{LabelBaseStyle}'>{"cell5"}</span>
+        </td>
+        <td>
+            <div style='{InputBaseStyle}; color: {ColorSecondary};'>
+                {"cell5"}
+            </div>
+        </td>
+        <td style='white-space: nowrap;'>
+            <span style='{LabelBaseStyle}'>{"cell5"}</span>
+        </td>
+        <td>
+            <div style='{InputBaseStyle}; color: {ColorSecondary};'>
+                {"cell5"}
+            </div>
+        </td>
+    </tr>
 </table>"
-
-ColorBase = "#333333";
-ColorSecondary = "#666666";
-ColorSuccess = "#27ae60";
-ColorBackground = "#eeeeee";
-LabelBaseStyle = $"font-size: 14px; color: {ColorBase}; font-weight: bold; display: inline-block; padding: 12px 0;";
-InputBaseStyle = $"width: 100%; padding: 12px; font-size: 16px; border: none; border-radius: 8px; background-color: {ColorBackground}; color: {ColorBase}; box-sizing: border-box; transition: all 0.3s ease;";
-RadioContainerStyle = $"display: flex; gap: 20px; padding: 12px; background-color: {ColorBackground}; border-radius: 8px;";
-RadioLabelStyle = "display: inline-flex; align-items: center; gap: 8px; cursor: default;";
-RadioCheckedStyle = $"width: 18px; height: 18px; accent-color: {ColorSuccess}; cursor: not-allowed;";
-RadioUncheckedStyle = $"width: 18px; height: 18px; accent-color: {ColorSecondary}; cursor: not-allowed; opacity: 0.5;";
-TextSuccessStyle = $"font-size: 16px; color: {ColorSuccess};";
-TextSecondaryStyle = $"font-size: 16px; color: {ColorSecondary};";
