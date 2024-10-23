@@ -1,0 +1,133 @@
+はい、最上位のコンテナーを除去し、グリッドから開始するように修正します。
+
+```powerapps
+// スタイル定義（名前付き変数）
+GridStyle: "display: grid; grid-template-columns: 1fr 1fr; gap: 20px;"
+
+FormGroupStyle: "display: flex; align-items: start; gap: 15px;"
+
+LabelContainerStyle: "width: 120px; padding-top: 15px;"
+
+LabelTextStyle: $"color: {ColorTextSecondary};"
+
+InputContainerStyle: "flex-grow: 1;"
+
+InputBaseStyle: $"width: 100%; padding: 15px; border: none; border-radius: {BorderRadiusSmall}px; background-color: {ColorBackgroundSecondary}; color: {ColorTextBody};"
+
+RadioContainerStyle: $"flex-grow: 1; background-color: {ColorBackgroundSecondary}; padding: 15px; border-radius: {BorderRadiusSmall}px;"
+
+RadioGroupStyle: "display: flex; gap: 20px;"
+
+RadioLabelStyle: "display: inline-flex; align-items: center; gap: 8px; cursor: default;"
+
+RadioCheckedStyle: $"width: 18px; height: 18px; accent-color: {ColorSuccess}; cursor: not-allowed;"
+
+RadioUncheckedStyle: $"width: 18px; height: 18px; accent-color: {ColorTextSecondary}; cursor: not-allowed; opacity: 0.5;"
+
+TextSuccessStyle: $"color: {ColorSuccess};"
+
+TextSecondaryStyle: $"color: {ColorTextSecondary};"
+
+// HTML文字列
+$"<div style='{GridStyle}'>
+    <!-- 左列アイテム1 -->
+    <div style='{FormGroupStyle}'>
+        <div style='{LabelContainerStyle}'>
+            <span style='{LabelTextStyle}'>取引先名称</span>
+        </div>
+        <div style='{InputContainerStyle}'>
+            <input type='text' value='株式会社サンプル商事' readonly style='{InputBaseStyle}'>
+        </div>
+    </div>
+
+    <!-- 右列アイテム1 -->
+    <div style='{FormGroupStyle}'>
+        <div style='{LabelContainerStyle}'>
+            <span style='{LabelTextStyle}'>取引先コード</span>
+        </div>
+        <div style='{InputContainerStyle}'>
+            <input type='text' value='ABC-12345' readonly style='{InputBaseStyle}'>
+        </div>
+    </div>
+
+    <!-- 左列アイテム2 -->
+    <div style='{FormGroupStyle}'>
+        <div style='{LabelContainerStyle}'>
+            <span style='{LabelTextStyle}'>担当者名</span>
+        </div>
+        <div style='{InputContainerStyle}'>
+            <input type='text' value='山田 太郎' readonly style='{InputBaseStyle}'>
+        </div>
+    </div>
+
+    <!-- 右列アイテム2 -->
+    <div style='{FormGroupStyle}'>
+        <div style='{LabelContainerStyle}'>
+            <span style='{LabelTextStyle}'>部署名</span>
+        </div>
+        <div style='{InputContainerStyle}'>
+            <input type='text' value='営業部' readonly style='{InputBaseStyle}'>
+        </div>
+    </div>
+
+    <!-- 左列アイテム3（ラジオボタン） -->
+    <div style='{FormGroupStyle}'>
+        <div style='{LabelContainerStyle}'>
+            <span style='{LabelTextStyle}'>取引区分</span>
+        </div>
+        <div style='{RadioContainerStyle}'>
+            <div style='{RadioGroupStyle}'>
+                <label style='{RadioLabelStyle}'>
+                    <input type='radio' name='trade_type' checked disabled style='{RadioCheckedStyle}'>
+                    <span style='{TextSuccessStyle}'>継続取引</span>
+                </label>
+                <label style='{RadioLabelStyle}'>
+                    <input type='radio' name='trade_type' disabled style='{RadioUncheckedStyle}'>
+                    <span style='{TextSecondaryStyle}'>スポット取引</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- 右列アイテム3（ラジオボタン） -->
+    <div style='{FormGroupStyle}'>
+        <div style='{LabelContainerStyle}'>
+            <span style='{LabelTextStyle}'>与信審査</span>
+        </div>
+        <div style='{RadioContainerStyle}'>
+            <div style='{RadioGroupStyle}'>
+                <label style='{RadioLabelStyle}'>
+                    <input type='radio' name='credit_check' checked disabled style='{RadioCheckedStyle}'>
+                    <span style='{TextSuccessStyle}'>要審査</span>
+                </label>
+                <label style='{RadioLabelStyle}'>
+                    <input type='radio' name='credit_check' disabled style='{RadioUncheckedStyle}'>
+                    <span style='{TextSecondaryStyle}'>審査不要</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 全幅で表示する項目 -->
+<div style='{FormGroupStyle}; margin-top: 20px;'>
+    <div style='{LabelContainerStyle}'>
+        <span style='{LabelTextStyle}'>備考</span>
+    </div>
+    <div style='{InputContainerStyle}'>
+        <textarea readonly style='{InputBaseStyle}; min-height: 80px; resize: none;'>取引開始にあたっての特記事項をここに記載します。</textarea>
+    </div>
+</div>"
+```
+
+変更点：
+1. 最上位のコンテナー要素を削除
+2. グリッドレイアウトから直接開始
+3. 全体構造をシンプル化
+
+これにより：
+1. より柔軟なレイアウト調整が可能
+2. 余分なネストを削除
+3. Power Appsでの配置がより容易に
+
+HTMLテキストコントロールに直接配置できる形式になっています。​​​​​​​​​​​​​​​​
