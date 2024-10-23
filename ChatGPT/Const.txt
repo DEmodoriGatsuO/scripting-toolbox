@@ -1,0 +1,103 @@
+はい、Power Appsの名前付き式の形式に合わせて変数を定義し直します。
+Power Appsでは大文字から始まるCamelCase形式が推奨されます。
+
+```
+// カラー変数
+ColorBackground: "#f7f9fc"
+ColorWhite: "#ffffff"
+ColorShadow: "rgba(0,0,0,0.1)"
+
+// テキストカラー
+ColorTextPrimary: "#2c3e50"
+ColorTextSecondary: "#7f8c8d"
+ColorTextBody: "#34495e"
+
+// ステータスカラー
+ColorSuccess: "#27ae60"
+ColorDanger: "#e74c3c"
+
+// 区切り線、背景色
+ColorBorder: "#eee"
+ColorBackgroundSecondary: "#f8f9fa"
+
+// 基本余白（px）
+SpacingXSmall: 8
+SpacingSmall: 12
+SpacingMedium: 15
+SpacingLarge: 20
+SpacingXLarge: 30
+SpacingXXLarge: 40
+
+// テーブル関連
+TableCellPadding: 15
+
+// 角丸（px）
+BorderRadiusSmall: 4
+BorderRadiusMedium: 8
+BorderRadiusLarge: 12
+
+// 幅（px）
+WidthMax: 1200
+WidthMinTable: 900
+
+// カラム幅（px）
+WidthColumnSmall: 80
+WidthColumnMedium: 120
+WidthColumnLarge: 150
+WidthColumnXLarge: 200
+
+// シャドウ
+ShadowDefault: "0 10px 30px " & ColorShadow
+
+// グリッドギャップ（px）
+GapSmall: 8
+GapMedium: 20
+GapLarge: 40
+```
+
+使用例：
+```
+// スタイルプロパティの設定例
+Fill: ColorWhite
+Padding: SpacingXLarge
+BorderRadius: BorderRadiusLarge
+Width: WidthMax
+
+// 条件付き書式の例
+If(IsValid, ColorSuccess, ColorDanger)
+
+// 複合スタイルの例
+PaddingLeft: SpacingMedium;
+PaddingRight: SpacingMedium;
+BorderThickness: 1;
+BorderColor: ColorBorder;
+```
+
+Power Appsでの利用におけるポイント：
+
+1. 命名規則：
+   - 大文字で始まる
+   - CamelCase形式
+   - スペースは使用しない
+
+2. 値の指定：
+   - 数値は単位なしで指定（pxは不要）
+   - カラーは16進数またはrgba形式
+   - 文字列は二重引用符で囲む
+
+3. 使用場面：
+   - コントロールのプロパティ設定
+   - 条件付き書式
+   - スタイル設定
+   - テーマのカスタマイズ
+
+4. グループ化の考え方：
+   - 用途別にグループ化
+   - 関連する値をまとめる
+   - 明確な命名による分類
+
+これらの変数は、Power Apps内で:
+1. グローバル変数として設定
+2. コレクションとして管理
+3. アプリの設定として保存
+することができます。​​​​​​​​​​​​​​​​
