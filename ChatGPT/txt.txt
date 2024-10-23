@@ -1,34 +1,42 @@
-<div>
+// HTML文字列
+$"<div style='{GridStyles}'>
     <div style='{FormGroupStyle}'>
         <div style='{LabelContainerStyle}'>
-            <span style='{LabelTextStyle}'>取引区分</span>
+            <span style='{LabelTextStyle}'>{"Lable1"}</span>
         </div>
-        <div style='{RadioContainerStyle}'>
-            <div style='{RadioGroupStyle}'>
-                <label style='{RadioLabelStyle}'>
-                    <input type='radio' name='trade_type' checked disabled style='{RadioCheckedStyle}'>
-                    <span style='{TextSuccessStyle}'>継続取引</span>
-                </label>
-                <label style='{RadioLabelStyle}'>
-                    <input type='radio' name='trade_type' disabled style='{RadioUncheckedStyle}'>
-                    <span style='{TextSecondaryStyle}'>スポット取引</span>
-                </label>
-            </div>
+        <div style='{InputContainerStyle}'>
+            <input type='text' value='{"Value1"}' readonly style='{InputBaseStyle}'>
         </div>
     </div>
     <div style='{FormGroupStyle}'>
         <div style='{LabelContainerStyle}'>
-            <span style='{LabelTextStyle}'>与信審査</span>
+            <span style='{LabelTextStyle}'>{"Lable2"}</span>
+        </div>
+        <div style='{InputContainerStyle}'>
+            <input type='text' value='{"Value2"}' readonly style='{InputBaseStyle}'>
+        </div>
+    </div>
+    <div style='{FormGroupStyle}'>
+        <div style='{LabelContainerStyle}'>
+            <span style='{LabelTextStyle}'>{"Lable3"}</span>
+        </div>
+        <div style='{InputContainerStyle}'>
+            <input type='text' value='{"Value3"}' readonly style='{InputBaseStyle}'>
+        </div>
+    </div>
+    <div style='{FormGroupStyle}'>
+        <div style='{LabelContainerStyle}'>
+            <span style='{LabelTextStyle}'>{"Lable4"}</span>
         </div>
         <div style='{RadioContainerStyle}'>
             <div style='{RadioGroupStyle}'>
                 <label style='{RadioLabelStyle}'>
-                    <input type='radio' name='credit_check' checked disabled style='{RadioCheckedStyle}'>
-                    <span style='{TextSuccessStyle}'>要審査</span>
+                    <input type='radio' name='check_1' checked disabled style='{RadioCheckedStyle}'>
+                    <span style='{TextSuccessStyle}'>{"radio1"}</span>
                 </label>
                 <label style='{RadioLabelStyle}'>
-                    <input type='radio' name='credit_check' disabled style='{RadioUncheckedStyle}'>
-                    <span style='{TextSecondaryStyle}'>審査不要</span>
+                    <input type='radio' name='check_1' disabled style='{RadioUncheckedStyle}'>
+                    <span style='{TextSecondaryStyle}'>{"radio2"}</span>
                 </label>
             </div>
         </div>
@@ -36,10 +44,10 @@
 </div>
 <div style='{FormGroupStyle}; margin-top: 20px;'>
     <div style='{LabelContainerStyle}'>
-        <span style='{LabelTextStyle}'>備考</span>
+        <span style='{LabelTextStyle}'>{"Lable5"}</span>
     </div>
     <div style='{InputContainerStyle}'>
-        <textarea readonly style='{InputBaseStyle}; min-height: 80px; resize: none;'>取引開始にあたっての特記事項をここに記載します。</textarea>
+        <textarea readonly style='{InputBaseStyle}; min-height: 40px; resize: none;'>{"Value5"}</textarea>
     </div>
 </div>
-
+"
