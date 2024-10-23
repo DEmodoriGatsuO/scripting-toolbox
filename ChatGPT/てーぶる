@@ -1,0 +1,72 @@
+はい、PowerAppsでの文字列補完を $"{}" の形式に変更します。一部抜粋して例を示します：
+
+```powerapps
+// スタイル定義
+MainContainerStyle: $"background-color: {ColorBackground}; margin: 0; padding: {SpacingLarge}px; display: flex; justify-content: center;"
+
+CardContainerStyle: $"background-color: {ColorWhite}; padding: {SpacingXLarge}px; border-radius: {BorderRadiusLarge}px; box-shadow: {ShadowDefault}; max-width: {WidthMax}px; width: 100%;"
+
+TableHeaderCellStyle: $"padding: {SpacingMedium}px; color: {ColorTextSecondary}; text-align: center; border-bottom: 2px solid {ColorBorder};"
+
+// HTML文字列
+$"<div style='{MainContainerStyle}'>
+    <div style='{CardContainerStyle}'>
+        <!-- ヘッダー部分 -->
+        <div style='margin-bottom: {SpacingXXLarge}px;'>
+            <h1 style='color: {ColorTextPrimary}; margin: 0 0 {SpacingMedium}px 0;'>取引先登録申請書</h1>
+            <table style='width: 100%; border-collapse: separate; border-spacing: 0;'>
+                <tr>
+                    <td style='padding: {SpacingXSmall}px {SpacingLarge}px {SpacingXSmall}px 0; width: 25%; white-space: nowrap;'>
+                        <span style='color: {ColorTextSecondary};'>管理番号：</span>
+                        <span style='color: {ColorTextBody}; margin-left: {SpacingXSmall}px;'>ABC-2024-001</span>
+                    </td>
+                    <td style='padding: {SpacingXSmall}px {SpacingLarge}px {SpacingXSmall}px 0; width: 25%; white-space: nowrap;'>
+                        <span style='color: {ColorTextSecondary};'>部門コード：</span>
+                        <span style='color: {ColorTextBody}; margin-left: {SpacingXSmall}px;'>DEPT-001</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 確認項目例 -->
+        <div style='margin-bottom: {SpacingXXLarge}px;'>
+            <div style='color: {ColorTextPrimary}; margin-bottom: {SpacingXSmall}px;'>取引開始要件の確認</div>
+            <div style='color: {ColorTextSecondary}; margin-bottom: {SpacingSmall}px;'>社内規定の取引開始基準を満たしていますか</div>
+            <div style='background-color: {ColorBackgroundSecondary}; padding: {SpacingLarge}px; border-radius: {BorderRadiusMedium}px;'>
+                <div style='display: flex; gap: {GapLarge}px;'>
+                    <label style='display: inline-flex; align-items: center; gap: {SpacingXSmall}px; cursor: default;'>
+                        <input type='radio' name='requirement_check' checked disabled 
+                               style='width: 18px; height: 18px; accent-color: {ColorSuccess}; cursor: not-allowed;'>
+                        <span style='color: {ColorSuccess};'>はい</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- テーブル例 -->
+        <table style='width: 100%; border-collapse: separate; border-spacing: 0; min-width: {WidthMinTable}px;'>
+            <tr style='background-color: {ColorBackgroundSecondary};'>
+                <th style='{TableHeaderCellStyle} width: {WidthColumnSmall}px;'>点検段階</th>
+                <td style='padding: {SpacingMedium}px; color: {ColorTextBody}; text-align: center;'>一次点検</td>
+            </tr>
+        </table>
+    </div>
+</div>"
+```
+
+主な変更点：
+
+1. 文字列連結演算子(&)を $"{}" 形式に変更
+2. 変数の埋め込みを {} で囲む
+3. 文字列全体を $"" で囲む
+
+この方式のメリット：
+1. 可読性の向上
+   - 変数の挿入箇所が明確
+   - コードの構造が分かりやすい
+2. メンテナンス性の向上
+   - 文字列の編集が容易
+   - エラーの発見が容易
+3. コードの簡潔さ
+   - 連結演算子の削減
+   - より直感的な記述​​​​​​​​​​​​​​​​
