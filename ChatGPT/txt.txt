@@ -1,69 +1,71 @@
-// 基本カラー定義
-ColorBase: '#333333' // 基本の黒色
-ColorSecondary: '#666666' // 補足情報用のグレー
-ColorBackground: '#f8f9fa' // 背景色（薄いグレー）
-ColorBorder: '#eeeeee' // 境界線の色
+// すでに定義されている定数を使用
+// ColorBase, ColorSecondary, ColorBackground, ColorBorder, ColorSuccess, ColorDanger
+// InputBaseStyle（背景色等の参考に）などを流用
 
-// 共通スタイル定義
-TableHeaderStyle: $'padding: 15px; font-size: 14px; color: {ColorBase}; font-weight: bold; text-align: left; border-bottom: 2px solid {ColorBorder};'
-
-TableCellStyle: $'padding: 15px; font-size: 14px; color: {ColorBase};'
-
-TableCellCenterStyle: $'padding: 15px; font-size: 14px; color: {ColorBase}; text-align: center;'
-
-TableCellBoldStyle: $'padding: 15px; font-size: 14px; color: {ColorBase}; font-weight: 500;'
-
-TableEmptyCellStyle: $'padding: 15px; text-align: center; font-size: 14px; color: {ColorSecondary};'
+// 必要最小限の追加定数
+RadioStyle: 'width: 20px; height: 20px; accent-color: #27ae60; cursor: not-allowed;'
+RadioDisabledStyle: 'width: 20px; height: 20px; accent-color: #e74c3c; cursor: not-allowed; opacity: 0.5;'
 
 // HTML文字列
-$"<table style='width: 100%; border-collapse: separate; border-spacing: 0; min-width: 900px;'>
-    <!-- ヘッダー行 -->
-    <tr style='background-color: {ColorBackground};'>
-        <th style='{TableHeaderStyle} text-align: center; width: 80px;'>段階</th>
-        <th style='{TableHeaderStyle} width: 200px;'>承認フェーズ</th>
-        <th style='{TableHeaderStyle}'>詳細</th>
-        <th style='{TableHeaderStyle} width: 120px;'>承認者</th>
-        <th style='{TableHeaderStyle} width: 150px;'>承認者部署</th>
-        <th style='{TableHeaderStyle} text-align: center; width: 120px;'>承認日</th>
-    </tr>
-
-    <!-- 申請 -->
+$"<table style='width: 100%; border-collapse: separate; border-spacing: 0; min-width: 800px;'>
     <tr>
-        <td style='{TableCellCenterStyle}'>1</td>
-        <td style='{TableCellBoldStyle}'>申請</td>
-        <td style='{TableCellStyle}'>新規取引先登録申請の起案</td>
-        <td style='{TableCellStyle}'>山田 太郎</td>
-        <td style='{TableCellStyle}'>営業第一部</td>
-        <td style='{TableCellCenterStyle}'>2024/10/22</td>
+        <th style='padding: 15px; text-align: left; font-size: 14px; color: {ColorBase}; font-weight: bold; width: 250px; border-bottom: 2px solid {ColorBorder}; background-color: {ColorBackground};'>確認項目</th>
+        <th style='padding: 15px; text-align: center; font-size: 14px; color: {ColorBase}; font-weight: bold; width: 120px; border-bottom: 2px solid {ColorBorder}; background-color: {ColorBackground};'>
+            <div>一次確認</div>
+        </th>
+        <th style='padding: 15px; text-align: center; font-size: 14px; color: {ColorBase}; font-weight: bold; width: 120px; border-bottom: 2px solid {ColorBorder}; background-color: {ColorBackground};'>
+            <div>二次確認</div>
+        </th>
+        <th style='padding: 15px; text-align: center; font-size: 14px; color: {ColorBase}; font-weight: bold; width: 120px; border-bottom: 2px solid {ColorBorder}; background-color: {ColorBackground};'>
+            <div>最終承認</div>
+        </th>
     </tr>
 
-    <!-- 一次承認 -->
-    <tr style='background-color: {ColorBackground};'>
-        <td style='{TableCellCenterStyle}'>2</td>
-        <td style='{TableCellBoldStyle}'>一次承認</td>
-        <td style='{TableCellStyle}'>申請内容の確認と本人確認書類の検証</td>
-        <td style='{TableCellStyle}'>佐藤 次郎</td>
-        <td style='{TableCellStyle}'>営業管理部</td>
-        <td style='{TableCellCenterStyle}'>2024/10/23</td>
-    </tr>
-
-    <!-- 二次承認 -->
     <tr>
-        <td style='{TableCellCenterStyle}'>3</td>
-        <td style='{TableCellBoldStyle}'>二次承認</td>
-        <td style='{TableCellStyle}'>反社チェックと取引条件の確認</td>
-        <td style='{TableCellStyle}'>鈴木 三郎</td>
-        <td style='{TableCellStyle}'>法務部</td>
-        <td style='{TableEmptyCellStyle}'>-</td>
+        <td style='padding: 20px;'>
+            <div style='font-size: 13px; color: {ColorSecondary}; margin-top: 4px;'>身分証明書の有効期限と記載内容を確認</div>
+        </td>
+        <td style='text-align: center; padding: 20px;'>
+            <div style='position: relative;'>
+                <input type='radio' checked readonly disabled style='{RadioStyle}'>
+            </div>
+        </td>
+        <td style='text-align: center; padding: 20px;'>
+            <div style='position: relative;'>
+                <input type='radio' checked readonly disabled style='{RadioStyle}'>
+            </div>
+        </td>
+        <td style='text-align: center; padding: 20px;'>
+            <div style='position: relative;'>
+                <input type='radio' checked readonly disabled style='{RadioStyle}'>
+            </div>
+        </td>
     </tr>
 
-    <!-- 最終承認 -->
     <tr style='background-color: {ColorBackground};'>
-        <td style='{TableCellCenterStyle}'>4</td>
-        <td style='{TableCellBoldStyle}'>最終承認</td>
-        <td style='{TableCellStyle}'>取引開始の最終判断</td>
-        <td style='{TableCellStyle}'>田中 部長</td>
-        <td style='{TableCellStyle}'>営業部門</td>
-        <td style='{TableEmptyCellStyle}'>-</td>
+        <td style='padding: 20px;'>
+            <div style='font-size: 13px; color: {ColorSecondary}; margin-top: 4px;'>データベース照会による確認完了</div>
+        </td>
+        <td style='text-align: center; padding: 20px;'>
+            <div style='position: relative;'>
+                <input type='radio' checked readonly disabled style='{RadioStyle}'>
+            </div>
+        </td>
+        <td style='text-align: center; padding: 20px;'>
+            <div style='position: relative;'>
+                <label style='display: inline-flex; align-items: center; gap: 5px; cursor: not-allowed;'>
+                    <input type='radio' readonly disabled style='{RadioDisabledStyle}'>
+                    <span style='position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border: 2px solid #cbd5e0; border-radius: 50%;'></span>
+                </label>
+            </div>
+        </td>
+        <td style='text-align: center; padding: 20px;'>
+            <div style='position: relative;'>
+                <label style='display: inline-flex; align-items: center; gap: 5px; cursor: not-allowed;'>
+                    <input type='radio' readonly disabled style='{RadioDisabledStyle}'>
+                    <span style='position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border: 2px solid #cbd5e0; border-radius: 50%;'></span>
+                </label>
+            </div>
+        </td>
     </tr>
 </table>"
