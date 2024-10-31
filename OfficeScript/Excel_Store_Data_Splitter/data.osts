@@ -1,0 +1,65 @@
+/**
+ * 作成者: ChatGPT
+ * 関数の目的: 指定された開始セル（C1セルの値を使用）からC列にある店舗名を取得し、
+ *              重複を削除してユニークな店舗ごとに新しいシートを作成し、店舗別の結果を挿入する。
+ */
+
+function main(workbook: ExcelScript.Workbook) {
+  // C1セルの値を文字列の定数として設定
+  const startCellAddress: string = "C1";
+  
+  // アクティブなシートを取得
+  const sheet: ExcelScript.Worksheet = workbook.getActiveWorksheet();
+  
+  // C1セルの値を開始セルとして取得（C1の値を変更することで動的に対応可能）
+  const startCell: ExcelScript.Range = sheet.getRange(startCellAddress);
+  
+  // シートの使用範囲を取得
+  const usedRange: ExcelScript.Range = sheet.getUsedRange();
+  
+  // 開始行と終了行のインデックスを取得
+  const startRow: number = startCell.getRowIndex();
+  const endRow: number = usedRange.getRowCount() - 1;
+  
+  // 開始セルの列インデックスを取得
+  const column: number = startCell.getColumnIndex();
+  
+  // C列のデータを格納するための配列を初期化
+  const storeData: string[] = [];
+  
+  // C列のデータをループで取得
+  for (let i = startRow; i <= endRow; i++) {
+    const cellValue: string = sheet.getCell(i, column).getValue() as string;
+    if (cellValue) {
+      storeData.push(cellValue); // 値が存在する場合のみ配列に追加
+    }
+  }
+
+  // 重複を削除してユニークな店舗名の配列を作成
+  const uniqueStores: string[] = Array.from(new Set(storeData));
+  
+  // 各店舗ごとに新しいシートを作成しデータを挿入
+  uniqueStores.forEach(store => {
+    // 店舗名に対応するシートを取得（存在しない場合は新規作成）
+    let storeSheet: ExcelScript.Worksheet = workbook.getWorksheet(store);
+    if (!storeSheet) {
+      storeSheet = workbook.addWorksheet(store); // 新しいシートを作成
+    } else {
+      storeSheet.getUsedRange()?.clear(); // 既存のデータをクリア
+    }
+    
+    // 元のシートから店舗データを抽出して配列に追加
+    const storeRows: (string | number | boolean)[][] = [];
+    for (let i = startRow; i <= endRow; i++) {
+      const cellValue: string = sheet.getCell(i, column).getValue() as string;
+      if (cellValue === store) {
+        storeRows.push(sheet.getRow(i).getValues()[0] as (string | number | boolean)[]); // 行データを配列に追加
+      }
+    }
+    
+    // 店舗ごとのシートにデータを挿入
+    if (storeRows.length > 0) {
+      storeSheet.getRangeByIndexes(0, 0, storeRows.length, storeRows[0].length).setValues(storeRows);
+    }
+  });
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <title>Demodori Gatsuo Demo</title>
+</head>
+
+<body>
+    <h1>PyScriptとGoogleAppsScriptのコラボレーション</h1>
+    <h2>create by De'modori Gatsuo</h2>
+    <div class="font-mono">ハジメの一歩会 #3 Homework<label id="outputDiv"></label></div>
+    <div id="outputDiv2" class="font-mono"></div>
+    <div id="outputDiv3" class="font-mono"></div>
+    <py-script>
+        import asyncio
+
+        async def foo():
+        for i in range(1,101):
+        await asyncio.sleep(1)
+        Element("outputDiv2").write(i)
+
+        out3 = Element("outputDiv3")
+        if(i % 3 == 0) and (i % 4 == 0):
+        out3.write("3と4の倍数")
+        elif(i % 3 == 0):
+        out3.write('3の倍数')
+        elif(i % 4 == 0):
+        out3.write('4の倍数')
+        else:
+        out3.clear()
+
+        # close the global PyScript pyscript_loader
+        pyscript_loader.close()
+        pyscript.run_until_complete(foo())
+    </py-script>
+</body>
+
+</html>
